@@ -26,19 +26,23 @@ Clone ka_GE.spell repository.
 
 Log into mysql and add a user and a database for the word list:
 
-> $ mysql -uroot -p
-> mysql > CREATE DATABASE geoword;
-> mysql > CREATE USER 'geowords'@'localhost' IDENTIFIED BY 'password';
-> mysql > CREATE USER 'geowords'@'localhost' IDENTIFIED BY 'password';
-> mysql > GRANT ALL PRIVILEGES ON geowords.\* TO 'geowords'@'localhost'; 
-> mysql > FLUSH PRIVILEGES;
+```bash
+$ mysql -uroot -p
+mysql > CREATE DATABASE geoword;
+mysql > CREATE USER 'geowords'@'localhost' IDENTIFIED BY 'password';
+mysql > CREATE USER 'geowords'@'localhost' IDENTIFIED BY 'password';
+mysql > GRANT ALL PRIVILEGES ON geowords.\* TO 'geowords'@'localhost'; 
+mysql > FLUSH PRIVILEGES;
+```
 
 Create a file called dbaccess in the ka\_GE.spell root.
 containing:
 
-> DBNAME=geowords
-> DBUSER=geowords
-> DBPASS=password
+```bash
+DBNAME=geowords
+DBUSER=geowords
+DBPASS=password
+```
 
 Now you are ready to run the `build.sh` script. It will checkout the word list,
 push it to the database and build a hunspell dictionary from it.
