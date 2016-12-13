@@ -26,86 +26,163 @@ MAP სზ
 MAP პფ
 MAP გღ
 
-SFX s Y	27
-SFX s	ი	ები		ი
-SFX s	ა	ები		ა
-SFX s	0	ები		[ეოუ]
-SFX s	ი	ების	ი
-SFX s	ა	ების	ა
-SFX s	0	ების	[ეოუ]
-SFX s	ი	ებისა	ი
-SFX s	ა	ებისა	ა
-SFX s	0	ებისა	[ეოუ]
-SFX s	ი	ებს		ი
-SFX s	ა	ებს		ა
-SFX s	0	ებს		[ეოუ]
-SFX s	ი	ებმა	ი
-SFX s	ა	ებმა	ა
-SFX s	0	ებმა	[ეოუ]
-SFX s	ი	ებო		ი
-SFX s	ა	ებო		ა
-SFX s	0	ებო		[ეოუ]
-SFX s	ი	ებიც	ი
-SFX s	ა	ებიც	ა
-SFX s	0	ებიც	[ეოუ]
-SFX s	ი	ებისაც	ი
-SFX s	ა	ებისაც	ა
-SFX s	0	ებისაც	[ეოუ]
-SFX s	ი	ებით	ი
-SFX s	ა	ებით	ა
-SFX s	0	ებით	[ეოუ]
+# This should be one suffix, but since the wordlist doesn't contain all this
+# forms most of the time, munch will not use it at all. 
+
+SFX s Y 3
+SFX s   ი       ები             ი
+SFX s   ა       ები             ა
+SFX s   0       ები             [ეოუ]
+
+SFX b Y 3
+SFX b   ი       ების            ი
+SFX b   ა       ების            ა
+SFX b   0       ების            [ეოუ]
+
+SFX c Y 3
+SFX c   ი       ებისა           ი
+SFX c   ა       ებისა           ა
+SFX c   0       ებისა           [ეოუ]
+
+SFX d Y 3
+SFX d   ი       ებს             ი
+SFX d   ა       ებს             ა
+SFX d   0       ებს             [ეოუ]
+
+SFX e Y 3
+SFX e   ი       ებმა            ი
+SFX e   ა       ებმა            ა
+SFX e   0       ებმა            [ეოუ]
+
+SFX f Y 3
+SFX f   ი       ებო             ი
+SFX f   ა       ებო             ა
+SFX f   0       ებო             [ეოუ]
+
+SFX g Y 3
+SFX g   ი       ებიც            ი
+SFX g   ა       ებიც            ა
+SFX g   0       ებიც            [ეოუ]
+
+SFX h Y 3
+SFX h   ი       ებისაც          ი
+SFX h   ა       ებისაც          ა
+SFX h   0       ებისაც          [ეოუ]
+
+SFX j Y 3
+SFX j   ი       ებით            ი
+SFX j   ა       ებით            ა
+SFX j   0       ებით            [ეოუ]
+
+SFX k Y 3
+SFX k   ი       ებად            ი
+SFX k   ა       ებად            ა
+SFX k   0       ებად            [ეოუ]
+
+SFX l Y 2
+SFX l   ი       მა              ი  
+SFX l   0       მა              [აეოუ]  
+
+SFX m Y 2
+SFX m   ი       ს              ი  
+SFX m   0       ს              [აეოუ]  
+
+SFX n Y 3
+SFX n   0       ს              [იოუ]  
+SFX n   ა       ის              ა  
+SFX n   ე       ის              ე  
+
+SFX o Y 4
+SFX o   0       თ               ი
+SFX o   ა       ით              ა  
+SFX o   ე       ით              ე  
+SFX o   0       თი              [ოუ]  
+
+SFX p Y 4
+SFX p   ი       ად              ი
+SFX p   0       ად              ა  
+SFX p   ე       ად              ე  
+SFX p   0       დ               [ოუ]  
+
+SFX q Y 3
+SFX q   ი       ო               ი
+SFX q   0       ო               [აუ]  
+SFX q   0       ვ               [ეო]  
+
+SFX r Y 2
+SFX r   ი       სა             ი  
+SFX r   0       სა             [აეოუ]  
+
+SFX t Y 4
+SFX t   0       სა              ი  
+SFX t   0       სი              [ოუ]  
+SFX t   ა       ისა             ა  
+SFX t   ე       ისა             ე  
+
+SFX u Y 3
+SFX u   0       თა              ი
+SFX u   ა       ითა             ა  
+SFX u   ე       ითა             ე  
+
+SFX v Y 4
+SFX v   ი       ადა             ი
+SFX v   0       ადა             ა  
+SFX v   ე       ადა             ე  
+SFX v   0       და              [ოუ]  
 
 # ა ჩა მო მი გა შე წა და გადა 
 PFX A Y 1
-PFX A	0 	ა		.
+PFX A   0       ა       .
 
 PFX C Y 1
-PFX C	0 	ჩა		.
-
-PFX O Y 1
-PFX O	0 	მო		.
+PFX C   0       ჩა      .
 
 PFX I Y 1
-PFX I	0 	მი		.
+PFX I   0       მი      .
 
 PFX G Y 1
-PFX G	0 	გა		.
+PFX G   0       გა      .
 
 PFX S Y 1
-PFX S	0 	შე		.
+PFX S   0       შე      .
 
 PFX W Y 1
-PFX W	0 	წა		.
+PFX W   0       წა      .
 
 PFX D Y 1
-PFX D	0 	და		.
+PFX D   0       და      .
 
 PFX V Y 1
-PFX V	0 	გადა	.
+PFX V   0       გადა    .
+
 
 PFX Q Y 1
-PFX Q	0 	ამო		.
+PFX Q   0       ამო     .
 
 PFX F Y 1
-PFX F	0 	ჩამო	.
+PFX F   0       ჩამო    .
+
+PFX O Y 1
+PFX O   0       მო      .
 
 PFX T Y 1
-PFX T	0 	გამო	.
+PFX T   0       გამო    .
 
-PFX E Y 1
-PFX E	0 	შემო	.
+PFX U Y 1
+PFX U   0       შემო    .
 
-PFX R Y 1
-PFX R	0 	წამო	.
+PFX P Y 1
+PFX P   0       წამო    .
 
-PFX Z Y 1
-PFX Z	0 	გადმო	.
+PFX X Y 1
+PFX X   0       გადმო   .
 
 # არის
 SFX a Y 1
-SFX a	0 		ა		[აეიოუ]
+SFX a   0       ა       [აეიოუ]
 
 SFX i Y 2
-SFX i	ი 		ში		ი
-SFX i	0 		ში		[აეოუ]
+SFX i   ი       ში      ი
+SFX i   0       ში      [აეოუ]
 
+# vim: set ts=8 et:

@@ -39,11 +39,29 @@ LICENSE="
 	# Georgian wordlist by Dato Bumbeishvili
 	# (https://github.com/bumbeishvili/GeoWordsDatabase)
 "
+
+echo "pulling database dump from https://github.com/bumbeishvili/GeoWordsDatabase"
+if [[ -d GeoWordsDatabase ]]; then
+	cd GeoWordsDatabase;
+	git pull;
+	cd ..
+else
+	git clone https://github.com/bumbeishvili/GeoWordsDatabase.git GeoWordsDatabase;
+fi
+
+REF=$(cd GeoWordsDatabase; git rev-parse HEAD)
+touch dbref
+
+if [[ "$(cat dbref)" != "$REF" ]]; then
+	echo "Updating database"
+	mysql -NL "-u$DBUSER" "-p$DBPASS" "$DBNAME" <GeoWordsDatabase/geowords*.sql
+	echo "$REF" >dbref
+fi
+
 echo "Reading word list from db"
 mysql -NL "-u$DBUSER" "-p$DBPASS" "$DBNAME" -e "SELECT word_geo FROM words ORDER BY word_geo;" | uniq >ka_GE.words
 
-echo "Preparing dictionary"
-#echo "# $LICENSE" >ka_GE.dic # fails in munch
+echo "Preparing word list"
 wc -l <ka_GE.words >ka_GE.tmp
 cat ka_GE.words >>ka_GE.tmp
 
@@ -59,7 +77,14 @@ echo "TRY $TRY" >>ka_GE.aff
 echo "Append affix list"
 cat ../affixes >>ka_GE.aff
 
-echo "Munch dictionary"
-munch ka_GE.tmp ka_GE.aff>ka_GE.dic
+echo "Munch word list"
+munch ka_GE.tmp ka_GE.aff | tail -n +2 - >ka_GE.mun
+
+echo "Building dictionary"
+wc -l <ka_GE.words >ka_GE.dic
+echo "$LICENSE" >>ka_GE.dic
+cat ka_GE.mun >>ka_GE.dic
+
+rm ka_GE.tmp ka_GE.mun
 
 echo "Done."
