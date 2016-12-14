@@ -61,9 +61,9 @@ fi
 echo "Reading word list from db"
 mysql -NL "-u$DBUSER" "-p$DBPASS" "$DBNAME" -e "SELECT word_geo FROM words ORDER BY word_geo;" | uniq >ka_GE.words
 
-echo "Preparing word list"
+echo "Preparing word list: removing blacklisted words"
 wc -l <ka_GE.words >ka_GE.tmp
-cat ka_GE.words >>ka_GE.tmp
+sort ka_GE.words ../blacklist | uniq -u  >>ka_GE.tmp
 
 echo "Creating affix file"
 echo "$LICENSE" >ka_GE.aff
