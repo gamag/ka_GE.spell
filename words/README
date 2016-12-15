@@ -1,0 +1,17 @@
+This folder contains additional wordlists. They should contain one word per
+line, should be sorted (in UTF-8 (!)) and their name should end in .txt, other
+files will be ignored by the build script. The lists are expected to be quite
+trustworthy and to have mostly different sources than Bumbeishvilis words.
+
+The licenses of the wordlists must be compatible with the license of the
+generated dictionary.
+
+crubadan.txt: http://crubadan.org/ by Kevin Scannell
+	Crúbadán language dataset (c) by Kevin Scannell
+	This Crúbadán language dataset is licensed under a
+	Creative Commons Attribution 4.0 International License.
+	You should have received a copy of the license along with this
+	work.  If not, see <http://creativecommons.org/licenses/by/4.0/>.
+
+	crubadan.txt contains only a subset of the original words.
+

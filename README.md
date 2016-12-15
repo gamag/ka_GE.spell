@@ -4,9 +4,9 @@
 Contains:
 
 - Hunspell dictionary (for OpenOffice.org, Mozilla Firefox, Google Chrome, ...)
-- Script to update the dictionary from https://github.com/bumbeishvili/GeoWordsDatabase
+- Script to generate the dictionary from wordlists
 
-## Installation ##
+## Dictionary installation ##
 
 TODO: How to install on other systems
 TODO: Automatically build OpenOffice/Firefox/... package.
@@ -23,6 +23,15 @@ TODO: Automatically build OpenOffice/Firefox/... package.
 
 copy `build/ka_GE.dic` and `build/ka_GE.aff` to `/usr/share/hunspell/`
 
+
+## Data sources ##
+
+Word lists by the following People / from the following sources are used to generate the dictionary:
+
+- Dato Bumbeishvili (https://github.com/bumbeishvili/GeoWordsDatabase)
+- Kevin Scannell (http://crubadan.org/languages/ka, CC-BY 4.0) 
+
+Thanks a lot for your awesome work! 
 
 ## Update/build dictionary ##
 
