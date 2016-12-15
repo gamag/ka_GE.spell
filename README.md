@@ -8,12 +8,21 @@ Contains:
 
 ## Installation ##
 
-TODO: How to install on other systems than linux.
+TODO: How to install on other systems
 TODO: Automatically build OpenOffice/Firefox/... package.
+
+### Mac OS X (10.6 and later) ###
+
+- Download or clone this repo.
+- In `Finder`, select `Go To Folder` from `Go` menu, type in `~/Library`, click
+  `Go` (for system wide installation, use `/Library` instead).
+- In the `Library` directory, locate the folder `Spelling` or create it, if it is not there.
+- Copy `ka_GE.aff` and `ka_GE.dic` from the repository (in `build/`) to the `Spelling` folder.
 
 ### Linux ###
 
 copy `build/ka_GE.dic` and `build/ka_GE.aff` to `/usr/share/hunspell/`
+
 
 ## Update/build dictionary ##
 
