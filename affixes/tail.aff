@@ -1,0 +1,45 @@
+# This file is part of ge_KA.spell, (c) 2016 Gabriel Margiani
+
+# Rules for unidentified words.
+
+PFX 3 Y 1
+PFX 3   0       ა       .
+
+PFX 2 Y 1
+PFX 2   0       მი      .
+
+PFX 1 Y 1
+PFX 1   0       და      .
+
+PFX 0 Y 1
+PFX 0   0       გა      .
+
+SFX 9 Y 1
+SFX 9   0       ა			.
+
+SFX 8 Y 2
+SFX 8   ი       ს              ი  
+SFX 8   0       ს              [^ი]
+
+SFX 7 Y 4
+SFX 7   0       ს              	[იოუ]  
+SFX 7   ა       ის              ა  
+SFX 7   ე       ის              ე  
+SFX 7   0       ის              [^აეიოუ]
+
+SFX 6 Y 3
+SFX 6   ი       ებს             ი
+SFX 6   ა       ებს             ა
+SFX 6   0       ებს             [^აი]
+
+SFX 5 Y 3
+SFX 5   ი       ები             ი
+SFX 5   ა       ები             ა
+SFX 5   0       ები             [^აი]
+
+SFX 4 Y 3
+SFX 4   ი       ების            ი
+SFX 4   ა       ების            ა
+SFX 4   0       ების            [^აი]
+
+# vim: set ts=8 et:

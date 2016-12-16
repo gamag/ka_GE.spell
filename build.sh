@@ -3,12 +3,12 @@
 # This file is part of ka_GE.spell
 # Copyright (C) 2016 Gabriel Margiani
 #
-#  is free software: you can redistribute it and/or modify
+# ka_GE.spell is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-#  is distributed in the hope that it will be useful,
+# ka_GE.spell is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
@@ -105,9 +105,9 @@ leftxor ka_GE.dblow ../words/*.txt >ka_GE.low
 
 echo "Preparing word list: removing blacklisted words"
 sort ../blacklist >ka_GE.ign
-leftxor ka_GE.words ka_GE.ign >ka_GE.tmp2
-wc -l <ka_GE.tmp2 >ka_GE.tmp
-cat ka_GE.tmp2 >>ka_GE.tmp
+leftxor ka_GE.words ka_GE.ign >ka_GE.tmp
+wc -l <ka_GE.tmp >ka_GE.afi
+cat ka_GE.tmp >>ka_GE.afi
 
 
 echo "Creating affix file"
@@ -119,25 +119,17 @@ TRY=$(mysql -NL "-u$DBUSER" "-p$DBPASS" "$DBNAME" -e "SELECT title FROM statisti
 echo $TRY;
 echo "TRY $TRY" >>ka_GE.aff
 
-echo "Append affix list"
-cat ../affixes >>ka_GE.aff
-
-
-echo "Munch word list"
-munch ka_GE.tmp ka_GE.aff | tail -n +2 - > ka_GE.tmp2
-sort ka_GE.tmp2 >ka_GE.mun
-
+echo "Starting affix compression"
+../affixcompress.sh -t ka_GE.afi ka_GE.mun ka_GE.aff
 
 echo "Remove rare words and words with low confidence level"
 leftxor ka_GE.mun ka_GE.low >ka_GE.tmp
-
 
 echo "Building dictionary"
 wc -l <ka_GE.words >ka_GE.dic
 echo "$LICENSE" >>ka_GE.dic
 cat ka_GE.tmp >>ka_GE.dic
 
-
-rm ka_GE.tmp ka_GE.tmp2
+rm ka_GE.tmp
 
 echo "Done."

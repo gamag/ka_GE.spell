@@ -1,0 +1,31 @@
+# This file is part of ge_KA.spell, (c) 2016 Gabriel Margiani
+
+# Maps and Replacements, General Options
+
+# Letters on the same key
+REP 14
+REP ღ რ
+REP რ ღ
+REP ტ თ
+REP თ ტ
+REP წ ჭ
+REP ჭ წ
+REP ს შ
+REP შ ს
+REP ზ ძ
+REP ძ ზ
+REP ც ჩ
+REP ჩ ც
+REP ჯ ჟ
+REP ჟ ჯ 
+
+MAP 7
+MAP ქკგყ
+MAP ტთდ
+MAP ცძწ(თს)
+MAP ჩჯჭ(დშ)
+MAP სზ
+MAP პფ
+MAP გღ
+
+# vim: set ts=8 et:

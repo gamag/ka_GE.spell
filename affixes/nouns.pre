@@ -1,0 +1,131 @@
+# This file is part of ka_GE.spell
+# Copyright (C) 2016 Gabriel Margiani
+#
+# ka_GE.spell is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# ka_GE.spell is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ka_GE.spell.  If not, see <http://www.gnu.org/licenses/>.
+
+SET UTF-8
+
+# affixes to identify nouns using munch
+
+SFX a Y 3
+SFX a   ი       ები             ი
+SFX a   ა       ები             ა
+SFX a   0       ები             [ეოუ]
+
+SFX b Y 3
+SFX b   ი       ების            ი
+SFX b   ა       ების            ა
+SFX b   0       ების            [ეოუ]
+
+SFX c Y 3
+SFX c   ი       ებისა           ი
+SFX c   ა       ებისა           ა
+SFX c   0       ებისა           [ეოუ]
+
+SFX d Y 3
+SFX d   ი       ებს             ი
+SFX d   ა       ებს             ა
+SFX d   0       ებს             [ეოუ]
+
+SFX e Y 3
+SFX e   ი       ებმა            ი
+SFX e   ა       ებმა            ა
+SFX e   0       ებმა            [ეოუ]
+
+SFX f Y 3
+SFX f   ი       ებო             ი
+SFX f   ა       ებო             ა
+SFX f   0       ებო             [ეოუ]
+
+SFX g Y 3
+SFX g   ი       ებიც            ი
+SFX g   ა       ებიც            ა
+SFX g   0       ებიც            [ეოუ]
+
+SFX h Y 3
+SFX h   ი       ებისაც          ი
+SFX h   ა       ებისაც          ა
+SFX h   0       ებისაც          [ეოუ]
+
+SFX j Y 3
+SFX j   ი       ებით            ი
+SFX j   ა       ებით            ა
+SFX j   0       ებით            [ეოუ]
+
+SFX i Y 3
+SFX i   ი       ებად            ი
+SFX i   ა       ებად            ა
+SFX i   0       ებად            [ეოუ]
+
+SFX k Y 3
+SFX k   ი       ებში            ი
+SFX k   ა       ებში             ა
+SFX k   0       ებში            [ეოუ]
+
+SFX l Y 2
+SFX l   ი       მა              ი  
+SFX l   0       მა              [აეოუ]  
+
+SFX m Y 2
+SFX m   ი       ს              ი  
+SFX m   0       ს              [აეოუ]  
+
+SFX n Y 3
+SFX n   0       ს              [იოუ]  
+SFX n   ა       ის              ა  
+SFX n   ე       ის              ე  
+
+SFX o Y 4
+SFX o   0       თ               ი
+SFX o   ა       ით              ა  
+SFX o   ე       ით              ე  
+SFX o   0       თი              [ოუ]  
+
+SFX p Y 4
+SFX p   ი       ად              ი
+SFX p   0       ად              ა  
+SFX p   ე       ად              ე  
+SFX p   0       დ               [ოუ]  
+
+SFX q Y 3
+SFX q   ი       ო               ი
+SFX q   0       ო               [აუ]  
+SFX q   0       ვ               [ეო]  
+
+SFX r Y 2
+SFX r   ი       სა             ი  
+SFX r   0       სა             [აეოუ]  
+
+SFX t Y 4
+SFX t   0       სა              ი  
+SFX t   0       სი              [ოუ]  
+SFX t   ა       ისა             ა  
+SFX t   ე       ისა             ე  
+
+SFX u Y 3
+SFX u   0       თა              ი
+SFX u   ა       ითა             ა  
+SFX u   ე       ითა             ე  
+
+SFX s Y 4
+SFX s   ი       ადა             ი
+SFX s   0       ადა             ა  
+SFX s   ე       ადა             ე  
+SFX s   0       და              [ოუ]  
+
+SFX v Y 2
+SFX v   ი       ში            ი
+SFX v   0       ში            [აეოუ]
+
+# vim: set ts=8 et:
