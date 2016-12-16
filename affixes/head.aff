@@ -2,6 +2,10 @@
 
 # Maps and Replacements, General Options
 
+SET UTF-8
+
+TRY აიესრმოდლნვბთუგხშცტკქწზყფპღძჩჯჭჰჟ
+
 # Letters on the same key
 REP 14
 REP ღ რ

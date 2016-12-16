@@ -1,0 +1,2 @@
+This folder contains scripts to build the dictionary,
+don't call them directly, user the makefile.

@@ -17,11 +17,11 @@ TODO: Automatically build OpenOffice/Firefox/... package.
 - In `Finder`, select `Go To Folder` from `Go` menu, type in `~/Library`, click
   `Go` (for system wide installation, use `/Library` instead).
 - In the `Library` directory, locate the folder `Spelling` or create it, if it is not there.
-- Copy `ka_GE.aff` and `ka_GE.dic` from the repository (in `build/`) to the `Spelling` folder.
+- Copy `ka_GE.aff` and `ka_GE.dic` from the repository (in `dictionaries/`) to the `Spelling` folder.
 
 ### Linux ###
 
-copy `build/ka_GE.dic` and `build/ka_GE.aff` to `/usr/share/hunspell/`
+copy `dictionaries/ka_GE.dic` and `dictionaries/ka_GE.aff` to `/usr/share/hunspell/`
 
 
 ## Data sources ##
@@ -33,14 +33,22 @@ Word lists by the following People / from the following sources are used to gene
 
 Thanks a lot for your awesome work! 
 
+
 ## Update/build dictionary ##
 
-You need a bash compatible shell, a running mysql server, git and hunspell (and
+You need a bash compatible shell, gnu tools and  hunspell (and
 hunspell-tools on some systems) installed.
 
-### Prepare database ###
+To build the dictionary run `make all`
 
-Clone ka_GE.spell repository.
+### Updating Bumbeishvilis word list ###
+
+NOTE: the word list is included in `words/`, you don't need this steps to work
+on the dictionary.
+
+You need a running mysql server and git.
+
+Clone this repository
 
 Log into mysql and add a user and a database for the word list:
 
@@ -62,8 +70,8 @@ DBUSER=geowords
 DBPASS=password
 ```
 
-Now you are ready to run the `build.sh` script. It will checkout the word list,
-push it to the database and build a hunspell dictionary from it.
+call `make db`
+
 
 ## Remarks ##
 
