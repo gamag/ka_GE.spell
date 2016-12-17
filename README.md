@@ -76,11 +76,14 @@ call `make db`
 ## Remarks ##
 
 The automatically created dictionary is not very accurate, some words may be wrong,
-many missing. Also, the affix file is optimized for automatic handling using
-`munch` from hunspell and describes the Georgian language in a very suboptimal
-way. More work needs to be done to clean that, which implies a move from
-automatic to manual affix compression (or implement something to do it
-semiautomatic, so the wordlist can be updated from database without loosing
-manual corrections).
+many missing. To improve that, words from the dictionary can be reviewed and
+correct words added to the `reviewed` dictionary in their final,
+affix-compressed form. Wrong words can be added to `blacklist`.
 
-TODO: translate to Georgian.
+## Contributing ##
+
+Any help is very welcome, especially reviewing the dictionary and improving the affix files.
+
+
+TODO: translate README to Georgian.
+

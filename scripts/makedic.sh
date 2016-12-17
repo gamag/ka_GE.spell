@@ -30,6 +30,7 @@ leftxor "$MUN" "$LOW" >ka_GE.tmp
 echo "DIC: Building dictionary"
 wc -l <ka_GE.tmp >"$DIC"
 echo "$LICENSE" >>"$DIC"
+cat ../reviewed >> "$DIC"
 cat ka_GE.tmp >>"$DIC"
 
 rm ka_GE.tmp

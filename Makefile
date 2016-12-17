@@ -34,9 +34,9 @@ $(AFF): scripts/makeaff.sh affixes/*.aff
 	@echo building affix file
 	@./scripts/makeaff.sh $(AUTH) $(AFF)
 
-$(WRD): scripts/wordlist.sh words/*.txt words/*.low blacklist
+$(WRD): scripts/wordlist.sh words/*.txt words/*.low blacklist reviewed $(AFF)
 	@echo compiling word lists
-	@./scripts/wordlist.sh $(AUTH) words $(WRD)
+	@./scripts/wordlist.sh $(AUTH) words $(WRD) $(AFF)
 
 $(LOW): scripts/wordlist.sh words/*.txt words/*.low
 	@echo compiling low-trust word lists
@@ -46,7 +46,7 @@ $(MUN): scripts/affixcompress.sh affixes/*.sed affixes/*.pre affixes/*.aff $(AFF
 	@echo automatic affix compression
 	@./scripts/affixcompress.sh $(AUTH) $(WRD) $(MUN) $(AFF)
 
-$(DIC): scripts/makedic.sh $(MUN) $(LOW)
+$(DIC): scripts/makedic.sh $(MUN) $(LOW) reviewed
 	@echo compiling dictionay
 	@./scripts/makedic.sh $(AUTH) $(MUN) $(LOW) $(DIC)
 
