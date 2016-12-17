@@ -1,17 +1,30 @@
 
-# Spell checking for Georgian - ქართული ენა #
+# Georgian Spell Checking Dictionary -  ქართული ორთოგრაფიული ლექსიკონი #
 
 Contains:
 
-- Hunspell dictionary (for OpenOffice.org, Mozilla Firefox, Google Chrome, ...)
-- Script to generate the dictionary from wordlists
+- Hunspell dictionary (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more)
+- Script to generate the dictionary from word lists
 
 ## Dictionary installation ##
 
-TODO: How to install on other systems
-TODO: Automatically build OpenOffice/Firefox/... package.
+### In Applications ##
 
-### Mac OS X (10.6 and later) ###
+- In OpenOffice and LibreOffice the dictionary can be installed from the extension manager:
+  From the menu `tools` select `Extension Manager`. In the extension manager
+  window click `add` and open `dictionaries/ka_GE.spell.oxt`
+- In Firefox: open `dictionaries/ka_GE.spell.xpi` in your browser.
+- In Thunderbird: open the add-ons manager and drag the .xpi file there.
+- TODO: other applications.
+
+### System wide ###
+
+#### Windows ####
+
+I don't know if and how this is possible, probably not at all. Install the dictionary
+directly in the programs you use (see above).
+
+#### Mac OS X (10.6 and later) ####
 
 - Download or clone this repo.
 - In `Finder`, select `Go To Folder` from `Go` menu, type in `~/Library`, click
@@ -19,7 +32,7 @@ TODO: Automatically build OpenOffice/Firefox/... package.
 - In the `Library` directory, locate the folder `Spelling` or create it, if it is not there.
 - Copy `ka_GE.aff` and `ka_GE.dic` from the repository (in `dictionaries/`) to the `Spelling` folder.
 
-### Linux ###
+#### Linux ####
 
 copy `dictionaries/ka_GE.dic` and `dictionaries/ka_GE.aff` to `/usr/share/hunspell/`
 
@@ -39,7 +52,8 @@ Thanks a lot for your awesome work!
 You need a bash compatible shell, gnu tools and  hunspell (and
 hunspell-tools on some systems) installed.
 
-To build the dictionary run `make all`
+To build the dictionary, run `make all`
+To build the packages, run `make bundle` later.
 
 ### Updating Bumbeishvilis word list ###
 

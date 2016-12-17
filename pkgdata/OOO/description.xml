@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006" xmlns:d="http://openoffice.org/extensions/description/2006"  xmlns:xlink="http://www.w3.org/1999/xlink">
+	<version value="{{VERSION}}" />
+    <identifier value="ch.margiani.ka_GE.spell.dictionary" />
+    <display-name>
+        <name lang="en">Georgian Spell Checking Dictionary</name>
+		<name lang="ka">ქართული ორთოგრაფიული ლექსიკონი</name>
+    </display-name>
+    <platform value="all" />
+    <dependencies>
+        <OpenOffice.org-minimal-version value="2.4" d:name="OpenOffice.org 2.4" />
+    </dependencies>
+    <publisher>
+        <name>Gabriel Margiani</name>
+    </publisher>
+	<extension-description>
+		<src xlink:href="description/desc_en.txt" lang="en" />
+	</extension-description>
+</description>

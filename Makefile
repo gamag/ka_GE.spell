@@ -22,6 +22,9 @@ WRD:=$(abspath build/ka_GE.wrd)
 LOW:=$(abspath build/ka_GE.low)
 MUN:=$(abspath build/ka_GE.mun)
 
+XPI:=$(abspath dictionaries/ka_GE.spell.xpi)
+OXT:=$(abspath dictionaries/ka_GE.spell.oxt)
+
 scripts/%: scripts/common.sh
 
 # Word list passed around must be sorted and 'uniq'
@@ -50,6 +53,14 @@ $(DIC): scripts/makedic.sh $(MUN) $(LOW) reviewed
 	@echo compiling dictionay
 	@./scripts/makedic.sh $(AUTH) $(MUN) $(LOW) $(DIC)
 
+$(OXT): scripts/package.sh $(DIC) $(AFF)
+	@echo building OpenOffice plugin
+	@./scripts/package.sh $(AUTH) ooo $(DIC) $(AFF) $(OXT)
+
+$(XPI): scripts/package.sh $(DIC) $(AFF)
+	@echo building Mozilla plugin
+	@./scripts/package.sh $(AUTH) mozilla $(DIC) $(AFF) $(XPI)
+
 all: $(AFF) $(DIC)
 	@echo done
 
@@ -64,6 +75,9 @@ compress: $(MUN)
 
 dic: $(DIC)
 	@echo dictionary build
+
+bundle: $(OXT) $(XPI)
+	@echo bundled
 
 db:
 	@./scripts/bumbeishvili.sh $(AUTH)
