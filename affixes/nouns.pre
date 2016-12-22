@@ -18,6 +18,8 @@ SET UTF-8
 
 # affixes to identify nouns using munch
 
+# syncope exceptions: ღმვთის, ღმერთები, (ღმერთის) and ამბავი, ამბის, ამბები
+
 SFX a Y 3
 SFX a   ი       ები             ი
 SFX a   ა       ები             ა
