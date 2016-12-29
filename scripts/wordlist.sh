@@ -43,11 +43,11 @@ function wordlist() {
 	echo "WRD: Merging word lists"
 	sort -m $wdir/*.txt $wdir/*.low | uniq >txttmp
 	echo "WRD: Removing blacklisted words"
-	leftxor txttmp ../blacklist >txttmp2
+	comm -23 txttmp ../blacklist >txttmp2
 	echo "WRD: Expanding reviewed words"
 	unmunch ../reviewed "$AFF" 2>/dev/null | sort | uniq >rew.unm
 	echo "WRD: Removing reviewed words"
-	leftxor txttmp2 rew.unm >"$RES"
+	comm -23 txttmp2 rew.unm >"$RES"
 
 	rm txttmp txttmp2
 }
@@ -58,12 +58,12 @@ function lowlist() {
 	echo "LOW: Merging low-trust lists"
 	sort -m $wdir/*.low | uniq -u >lowtmp
 	echo "LOW: Removing upgraded words"
-	leftxor lowtmp txttmp >"$RES"
+	comm -23 lowtmp txttmp >"$RES"
 	rm lowtmp txttmp
 }
 
 if [[ $1 == 'words' ]]; then
 	wordlist;
-else 
+else
 	lowlist
 fi

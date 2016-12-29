@@ -48,10 +48,10 @@ echo "TODO: Same for others"
 echo "AC: unmunch results"
 wc -l <"$oDIC" >afdict
 cat "$oDIC" >>afdict
-unmunch afdict "$AFF" 2>/dev/null | sort | uniq >afundict
+unmunch afdict "$AFF" 2>/dev/null | sort -u >afundict
 
 echo "AC: remove duplicates"
-leftxor "$iDIC" afundict >afprest
+comm -23 "$iDIC" afundict >afprest
 
 echo "AC: let munch give its best on what is left"
 wc -l <afprest >afrest

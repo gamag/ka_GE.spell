@@ -25,7 +25,7 @@ LOW=$2
 DIC=$3
 
 echo "DIC: Removing rare words and words with low confidence level"
-leftxor "$MUN" "$LOW" >ka_GE.tmp
+comm -23 "$MUN" "$LOW" >ka_GE.tmp
 
 echo "DIC: Building dictionary"
 wc -l <ka_GE.tmp >"$DIC"
