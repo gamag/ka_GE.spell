@@ -25,7 +25,7 @@ oDIC=$2
 AFF=$3
 adir=../affixes
 
->"$oDIC" # make sure it's empty.
+>adict # make sure it's empty.
 
 wc -l <"$iDIC" >afbase
 cat "$iDIC" >>afbase
@@ -34,20 +34,20 @@ echo "AC: munch word list to find nouns"
 munch afbase "$adir/nouns.pre" 2>/dev/null | tail -n +2 - > afpNouns
 
 echo "AC: extract nouns"
-sed -n -r -f "$adir/nouns.sed" afpNouns >>"$oDIC"
+sed -n -r -f "$adir/nouns.sed" afpNouns >>adict
 
 echo "TODO: Same for others"
 #echo "AC: munch word list to find verbs"
 #munch "$iDIC" "$adir/verbs.pre" 2>/dev/null | tail -n +2 - > afpverbs
 
 #echo "AC: extract verbs"
-#sed -n -r -f "$adir/verbs.sed" afpverbs >>"$oDIC"
+#sed -n -r -f "$adir/verbs.sed" afpverbs >>adict
 
 # ...
 
 echo "AC: unmunch results"
-wc -l <"$oDIC" >afdict
-cat "$oDIC" >>afdict
+wc -l <adict >afdict
+cat adict >>afdict
 unmunch afdict "$AFF" 2>/dev/null | sort -u >afundict
 
 echo "AC: remove duplicates"
@@ -56,7 +56,9 @@ comm -23 "$iDIC" afundict >afprest
 echo "AC: let munch give its best on what is left"
 wc -l <afprest >afrest
 cat afprest >>afrest
-munch afrest "$AFF" 2> /dev/null | tail -n +2 - >>"$oDIC"
+munch afrest "$AFF" 2> /dev/null | tail -n +2 - >>adict
+
+sort -u adict >"$oDIC"
 
 echo "AC: done"
 

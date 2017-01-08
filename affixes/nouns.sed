@@ -15,5 +15,5 @@
 # along with ka_GE.spell.  If not, see <http://www.gnu.org/licenses/>.
 
 # Substantives, without syncope.
-s/\/[a-v]*(([a-k][l-v]|[l-v][a-k])[a-v][a-v]|[a-v]([a-k][l-v]|[l-v][a-k])[a-v]|[a-v][a-v]([a-k][l-v]|[l-v][a-k]))[a-v]*/\/N/p
+s/\/[a-v]*(([a-k][l-v]|[l-v][a-k])[a-v][a-v]|[a-v]([a-k][l-v]|[l-v][a-k])[a-v]|[a-v][a-v]([a-k][l-v]|[l-v][a-k]))[a-v]*/\/SN/p
 
