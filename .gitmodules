@@ -1,0 +1,3 @@
+[submodule "xmunch"]
+	path = xmunch
+	url = git@github.com:gamag/xmunch.git
