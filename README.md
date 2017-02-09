@@ -49,10 +49,14 @@ Thanks a lot for your awesome work!
 
 ## Update/build dictionary ##
 
-You need a bash compatible shell, gnu tools and  hunspell (and
-hunspell-tools on some systems) installed.
+You need a bash compatible shell, gnu tools, hunspell (and
+hunspell-tools on some systems) and a c++14 compatible compiler installed.
+xmunch (https://github.com/gamag/xmunch) is as submodule, so after cloning
+this repository, run `git submodule update --init`, then go to xmunch subdirectory
+and run make.
 
 To build the dictionary, run `make all`
+
 To build the packages, run `make bundle` later.
 
 ### Updating Bumbeishvilis word list ###

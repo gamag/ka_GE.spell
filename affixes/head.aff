@@ -32,4 +32,6 @@ MAP სზ
 MAP პფ
 MAP გღ
 
+FORBIDDENWORD d
+
 # vim: set ts=8 et:

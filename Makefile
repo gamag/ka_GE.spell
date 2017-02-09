@@ -45,7 +45,7 @@ $(LOW): scripts/wordlist.sh words/*.txt words/*.low
 	@echo compiling low-trust word lists
 	@./scripts/wordlist.sh $(AUTH) lows $(LOW)
 
-$(MUN): scripts/affixcompress.sh affixes/*.sed affixes/*.pre affixes/*.aff $(AFF) $(WRD)
+$(MUN): scripts/affixcompress.sh affixes/*.xaff affixes/*.aff $(AFF) $(WRD)
 	@echo automatic affix compression
 	@./scripts/affixcompress.sh $(AUTH) $(WRD) $(MUN) $(AFF)
 

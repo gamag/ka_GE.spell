@@ -36,11 +36,13 @@ MAP სზ
 MAP პფ
 MAP გღ
 
+FORBIDDENWORD d
+
 
 # Clean noun affixes
 
 # syncope stem (მეგობრისა)
-SFX S Y 131
+SFX S Y 53
 SFX S   0       ს              [იოუ]
 SFX S   ა       ის              ა
 SFX S   ე       ის              ე
@@ -62,33 +64,6 @@ SFX S   ი       ადა             ი
 SFX S   0       ადა             ა
 SFX S   ე       ადა             ე
 SFX S   0       და              [ოუ]
-SFX S   ი       ები             ი               # Plural cases
-SFX S   ა       ები             ა
-SFX S   0       ები             [ეოუ]
-SFX S   ი       ების            ი
-SFX S   ა       ების            ა
-SFX S   0       ების            [ეოუ]
-SFX S   ი       ებისა           ი
-SFX S   ა       ებისა           ა
-SFX S   0       ებისა           [ეოუ]
-SFX S   ი       ებს             ი
-SFX S   ა       ებს             ა
-SFX S   0       ებს             [ეოუ]
-SFX S   ი       ებმა            ი
-SFX S   ა       ებმა            ა
-SFX S   0       ებმა            [ეოუ]
-SFX S   ი       ებო             ი
-SFX S   ა       ებო             ა
-SFX S   0       ებო             [ეოუ]
-SFX S   ი       ებით            ი
-SFX S   ა       ებით            ა
-SFX S   0       ებით            [ეოუ]
-SFX S   ი       ებითა           ი
-SFX S   ა       ებითა           ა
-SFX S   0       ებითა           [ეოუ]
-SFX S   ი       ებად            ი
-SFX S   ა       ებად            ა
-SFX S   0       ებად            [ეოუ]
 SFX S   ა       ისაც            ა           # Others
 SFX S   ე       ისაც            ე
 SFX S   0       თაც             ი
@@ -121,57 +96,87 @@ SFX S   ი       ამდის           ი
 SFX S   0       ამდის           ა
 SFX S   ე       ამდის           ე
 SFX S   0       მდის            [ოუ]
-SFX S   ი       ებში            ი               # others plural
-SFX S   ა       ებში            ა
-SFX S   0       ებში            [ეოუ]
-SFX S   ი       ებიც            ი
-SFX S   ა       ებიც            ა
-SFX S   0       ებიც            [ეოუ]
-SFX S   ი       ებისაც          ი
-SFX S   ა       ებისაც          ა
-SFX S   0       ებისაც          [ეოუ]
-SFX S   ი       ებმაც           ი
-SFX S   ა       ებმაც           ა
-SFX S   0       ებმაც           [ეოუ]
-SFX S   ი       ებითაც          ი
-SFX S   ა       ებითაც          ა
-SFX S   0       ებითაც          [ეოუ]
-SFX S   ი       ებივით          ი
-SFX S   ა       ებივით          ა
-SFX S   0       ებივით          [ეოუ]
-SFX S   ი       ებზე            ი
-SFX S   ა       ებზე            ა
-SFX S   0       ებზე            [ეოუ]
-SFX S   ი       ებთან           ი
-SFX S   ა       ებთან           ა
-SFX S   0       ებთან           [ეოუ]
-SFX S   ი       ებისთვის        ი
-SFX S   ა       ებისთვის        ა
-SFX S   0       ებისთვის        [ეოუ]
-SFX S   ი       ებისგან         ი
-SFX S   ა       ებისგან         ა
-SFX S   0       ებისგან         [ეოუ]
-SFX S   ი       ებისკენ         ი
-SFX S   ა       ებისკენ         ა
-SFX S   0       ებისკენ         [ეოუ]
-SFX S   ი       ებისათვის       ი
-SFX S   ა       ებისათვის       ა
-SFX S   0       ებისათვის       [ეოუ]
-SFX S   ი       ებისაგან        ი
-SFX S   ა       ებისაგან        ა
-SFX S   0       ებისაგან        [ეოუ]
-SFX S   ი       ებისაკენ        ი
-SFX S   ა       ებისაკენ        ა
-SFX S   0       ებისაკენ        [ეოუ]
-SFX S   ი       ებიდან          ი
-SFX S   ა       ებიდან          ა
-SFX S   0       ებიდან          [ეოუ]
-SFX S   ი       ებამდე          ი
-SFX S   ა       ებამდე          ა
-SFX S   0       ებამდე          [ეოუ]
-SFX S   ი       ებამდის         ი
-SFX S   ა       ებამდის         ა
-SFX S   0       ებამდის         [ეოუ]
+
+# plural forms
+SFX P Y 78
+SFX p   ი       ები             ი               # Plural cases
+SFX p   ა       ები             ა
+SFX p   0       ები             [ეოუ]
+SFX p   ი       ების            ი
+SFX p   ა       ების            ა
+SFX p   0       ების            [ეოუ]
+SFX p   ი       ებისა           ი
+SFX p   ა       ებისა           ა
+SFX p   0       ებისა           [ეოუ]
+SFX p   ი       ებს             ი
+SFX p   ა       ებს             ა
+SFX p   0       ებს             [ეოუ]
+SFX p   ი       ებმა            ი
+SFX p   ა       ებმა            ა
+SFX p   0       ებმა            [ეოუ]
+SFX p   ი       ებო             ი
+SFX p   ა       ებო             ა
+SFX p   0       ებო             [ეოუ]
+SFX p   ი       ებით            ი
+SFX p   ა       ებით            ა
+SFX p   0       ებით            [ეოუ]
+SFX p   ი       ებითა           ი
+SFX p   ა       ებითა           ა
+SFX p   0       ებითა           [ეოუ]
+SFX p   ი       ებად            ი
+SFX p   ა       ებად            ა
+SFX p   0       ებად            [ეოუ]
+SFX p   ი       ებში            ი               # others plural
+SFX p   ა       ებში            ა
+SFX p   0       ებში            [ეოუ]
+SFX p   ი       ებიც            ი
+SFX p   ა       ებიც            ა
+SFX p   0       ებიც            [ეოუ]
+SFX p   ი       ებისაც          ი
+SFX p   ა       ებისაც          ა
+SFX p   0       ებისაც          [ეოუ]
+SFX p   ი       ებმაც           ი
+SFX p   ა       ებმაც           ა
+SFX p   0       ებმაც           [ეოუ]
+SFX p   ი       ებითაც          ი
+SFX p   ა       ებითაც          ა
+SFX p   0       ებითაც          [ეოუ]
+SFX p   ი       ებივით          ი
+SFX p   ა       ებივით          ა
+SFX p   0       ებივით          [ეოუ]
+SFX p   ი       ებზე            ი
+SFX p   ა       ებზე            ა
+SFX p   0       ებზე            [ეოუ]
+SFX p   ი       ებთან           ი
+SFX p   ა       ებთან           ა
+SFX p   0       ებთან           [ეოუ]
+SFX p   ი       ებისთვის        ი
+SFX p   ა       ებისთვის        ა
+SFX p   0       ებისთვის        [ეოუ]
+SFX p   ი       ებისგან         ი
+SFX p   ა       ებისგან         ა
+SFX p   0       ებისგან         [ეოუ]
+SFX p   ი       ებისკენ         ი
+SFX p   ა       ებისკენ         ა
+SFX p   0       ებისკენ         [ეოუ]
+SFX p   ი       ებისათვის       ი
+SFX p   ა       ებისათვის       ა
+SFX p   0       ებისათვის       [ეოუ]
+SFX p   ი       ებისაგან        ი
+SFX p   ა       ებისაგან        ა
+SFX p   0       ებისაგან        [ეოუ]
+SFX p   ი       ებისაკენ        ი
+SFX p   ა       ებისაკენ        ა
+SFX p   0       ებისაკენ        [ეოუ]
+SFX p   ი       ებიდან          ი
+SFX p   ა       ებიდან          ა
+SFX p   0       ებიდან          [ეოუ]
+SFX p   ი       ებამდე          ი
+SFX p   ა       ებამდე          ა
+SFX p   0       ებამდე          [ეოუ]
+SFX p   ი       ებამდის         ი
+SFX p   ა       ებამდის         ა
+SFX p   0       ებამდის         [ეოუ]
 
 # normal stem (მეგობარო)
 SFX N Y 34

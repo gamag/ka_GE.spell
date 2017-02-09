@@ -1,0 +1,209 @@
+##
+# This file is part of ka_GE.spell
+# Copyright (C) 2017 Gabriel Margiani
+#
+# ka_GE.spell is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# ka_GE.spell is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ka_GE.spell.  If not, see <http://www.gnu.org/licenses/>.
+##
+
+# xmunch affix definitions for nouns.
+
+# in case of too many flase-positives, we have to increase the score limits
+# (e.g. P (1n 2x) -> P (2n 3x))
+
+# Plurals. Make sure we don't get Verbs by requiring at least one like ში
+P (1n 2x) {
+
+ი,ა       ები            (1n)
+ე,ო,უ     .ები           (1n)
+ი,ა       ების           (1n)
+ე,ო,უ     .ების          (1n)
+ი,ა       ებისა          (1n)
+ე,ო,უ     .ებისა         (1n)
+ი,ა       ებს            (1n)
+ე,ო,უ     .ებს           (1n)
+ი,ა       ებმა           (1n)
+ე,ო,უ     .ებმა          (1n)
+ი,ა       ებო            (1n)
+ე,ო,უ     .ებო           (1n)
+ი,ა       ებით           (1n)
+ე,ო,უ     .ებით          (1n)
+ი,ა       ებითა          (1n)
+ე,ო,უ     .ებითა         (1n)
+ი,ა       ებად           (1n)
+ე,ო,უ     .ებად          (1n)
+
+ი,ა       ებში           (1x)
+ე,ო,უ     .ებში          (1x)
+ი,ა       ებიც           (1x)
+ე,ო,უ     .ებიც          (1x)
+ი,ა       ებისაც         (1x)
+ე,ო,უ     .ებისაც        (1x)
+ი,ა       ებმაც          (1x)
+ე,ო,უ     .ებმაც         (1x)
+ი,ა       ებითაც         (1x)
+ე,ო,უ     .ებითაც        (1x)
+ი,ა       ებივით         (2x)
+ე,ო,უ     .ებივით        (2x)
+ი,ა       ებზე           (2x)
+ე,ო,უ     .ებზე          (2x)
+ი,ა       ებთან          (2x)
+ე,ო,უ     .ებთან         (2x)
+ი,ა       ებისთვის       (2x)
+ე,ო,უ     .ებისთვის      (2x)
+ი,ა       ებისგან        (2x)
+ე,ო,უ     .ებისგან       (2x)
+ი,ა       ებისკენ        (2x)
+ე,ო,უ     .ებისკენ       (2x)
+ი,ა       ებისათვის      (2x)
+ე,ო,უ     .ებისათვის     (2x)
+ი,ა       ებისაგან       (2x)
+ე,ო,უ     .ებისაგან      (2x)
+ი,ა       ებისაკენ       (2x)
+ე,ო,უ     .ებისაკენ      (2x)
+ი,ა       ებიდან         (2x)
+ე,ო,უ     .ებიდან        (2x)
+ი,ა       ებამდე         (2x)
+ე,ო,უ     .ებამდე        (2x)
+ი,ა       ებამდის        (2x)
+ე,ო,უ     .ებამდის       (2x)
+
+}
+
+
+# Syncope plurals. Make sure we don't get verbs by requiring at least one like ში
+P (1n 2x v) {
+
+ი         ები            (1n)
+ი         ების           (1n)
+ი         ებისა          (1n)
+ი         ებს            (1n)
+ი         ებმა           (1n)
+ი         ებო            (1n)
+ი         ებით           (1n)
+ი         ებითა          (1n)
+ი         ებად           (1n)
+
+ი         ებში           (2x)
+ი         ებიც           (1x)
+ი         ებისაც         (1x)
+ი         ებმაც          (1x)
+ი         ებითაც         (1x)
+ი         ებივით         (2x)
+ი         ებზე           (2x)
+ი         ებთან          (2x)
+ი         ებისთვის       (2x)
+ი         ებისგან        (2x)
+ი         ებისკენ        (2x)
+ი         ებისათვის      (2x)
+ი         ებისაგან       (2x)
+ი         ებისაკენ       (2x)
+ი         ებიდან         (2x)
+ი         ებამდე         (2x)
+ი         ებამდის        (2x)
+
+}
+
+
+# no syncope
+SN (2s 2n) {
+
+ი,ო,უ     .ს             (1s)
+ა,ე       ის             (1s)
+ა,ი,ე     ით             (1s)
+ო,უ       .თი            (1s)
+ი,ა,ე     ად             (1s)
+ო,უ       .დ             (1s)
+ო,უ       .სი            (1s)
+ა,ე       ისა            (1s)
+ი,ა,ე     ითა            (1s)
+ი,ა,ე     ადა            (1s)
+ო,უ       .და            (1s)
+ი,ა,ე     ისაც           (1s)
+ი,ა,ე     ითაც           (1s)
+ო,უ       .თიც           (1s)
+ო,უ       .სთვის         (2s)
+ი,ა,ე     ისთვის         (2s)
+ო,უ       .სგან          (2s)
+ი,ა,ე     ისგან          (2s)
+ო,უ       .სკენ          (2s)
+ი,ა,ე     ისკენ          (2s)
+ო,უ       .სათვის        (2s)
+ი,ა,ე     ისათვის        (2s)
+ო,უ       .საგან         (2s)
+ი,ა,ე     ისაგან         (2s)
+ო,უ       .საკენ         (2s)
+ი,ა,ე     ისაკენ         (2s)
+ი,ა,ე     ამდე           (2s)
+ო,უ       .მდე           (2s)
+ი,ა,ე     ამდის          (2s)
+ო,უ       .ამდის         (2s)
+
+ი         მა             (1n)
+ა,ე,ო,უ   .მა            (1n)
+ი         ს              (1n)
+ა,ე,ო,უ   .ს             (1n)
+ი         ო              (1n)
+ა,უ		  .ო             (1n)
+ე,ო       .ვ             (1n)
+ი         სა             (1n)
+ა,ე,ო,უ   .სა            (1n)
+ი         ნი             (1n)
+ი         თა             (1n)
+ი         თო             (1n)
+ი         ში             (2n)
+ა,ე,ო,უ   .ში            (2n)
+.         ც              (1n)
+.         ცა             (1n)
+ი         მაც            (1n)
+ა,ე,ო,უ   .მაც           (1n)
+ი         საც            (1n)
+ა,ე,ო,უ   .საც           (1n)
+ო,უ       .სიც           (1n)
+ი         შიც            (2n)
+ა,ე,ო,უ   .შიც           (2n)
+ი         ვით            (2n)
+ა,ე,ო,უ   .სავით         (2n)
+ი         ზე             (2n)
+ა,ე,ო,უ   .ზე            (2n)
+ი         თან            (2n)
+ა,ე,ო,უ   .სთან          (2n)
+ა,ე       იდან           (2n)
+ო,უ       .დან           (2n)
+
+}
+
+
+# syncope
+S (1a 2b v) {
+
+ი         ის             (1a)
+ი         ისა            (1a)
+ი         ადა            (1a)
+ი         ად             (1a)
+ი         ისაც           (1a)
+
+ი         ით             (1b)
+ი         ითა            (1b)
+ი         ითაც           (1b)
+ი         ისთვის         (2b)
+ი         ისგან          (2b)
+ი         ისკენ          (2b)
+ი         ისათვის        (2b)
+ი         ისაგან         (2b)
+ი         ისაკენ         (2b)
+ი         ამდე           (2b)
+ი         ამდის          (2b)
+
+}
+
