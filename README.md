@@ -1,10 +1,10 @@
 
-# Georgian Spell Checking Dictionary -  ქართული ორთოგრაფიული ლექსიკონი #
+# ქართული ორთოგრაფიული ლექსიკონი - Georgian Spell Checking Dictionary #
 
 Contains:
 
-- Hunspell dictionary (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more)
-- Script to generate the dictionary from word lists
+- Hunspell dictionary (MIT License) (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more)
+- Script to generate the dictionary from word lists (GPL3)
 
 ## Dictionary installation ##
 
@@ -41,7 +41,7 @@ copy `dictionaries/ka_GE.dic` and `dictionaries/ka_GE.aff` to `/usr/share/hunspe
 
 Word lists by the following People / from the following sources are used to generate the dictionary:
 
-- Dato Bumbeishvili (https://github.com/bumbeishvili/GeoWordsDatabase)
+- Dato Bumbeishvili (https://github.com/bumbeishvili/GeoWordsDatabase, MIT License)
 - Kevin Scannell (http://crubadan.org/languages/ka, CC-BY 4.0) 
 
 Thanks a lot for your awesome work! 

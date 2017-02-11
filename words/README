@@ -12,6 +12,7 @@ The licenses of the word lists must be compatible with the license of the
 generated dictionary.
 
 bumbeishvili.txt/.low: https://github.com/bumbeishvili/GeoWordsDatabase by Dato Bumbeishvili
+	Mit license (see LICENSE.mit)
 	words with only one or two in words_history.repeat_quantity (summed over all sources) are in
 	.low, everything else in .txt
 
