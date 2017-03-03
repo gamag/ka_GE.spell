@@ -32,6 +32,12 @@ MAP სზ
 MAP პფ
 MAP გღ
 
-FORBIDDENWORD d
+FORBIDDENWORD !
+NOSUGGEST %
+
+NEEDAFFIX &
+
+CIRCUMFIX *
+
 
 # vim: set ts=8 et:
