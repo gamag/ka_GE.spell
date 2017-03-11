@@ -55,232 +55,930 @@ MAP სზ
 MAP პფ
 MAP გღ
 
-FORBIDDENWORD !
-NOSUGGEST %
+FLAG long
 
-NEEDAFFIX &
+## Flag allocation:
+# Only the first of each pair is assigned here.
+#
+# System flag: &
+# Nouns: N
+# Verbs: ABCDEFIJKLOPQTUVabcdefijklopqtuv0-9
+# Other: GHMRSWXYZghmnrswxyz
 
-CIRCUMFIX *
+FORBIDDENWORD &!
+NOSUGGEST &n
 
+NEEDAFFIX &v
+
+CIRCUMFIX &x
 
 
 # Clean noun affixes
 
 # syncope stem (მეგობრისა)
-SFX S Y 53
-SFX S   0       ს              [იოუ]
-SFX S   ა       ის              ა
-SFX S   ე       ის              ე
-SFX S   0       თ               ი
-SFX S   ა       ით              ა
-SFX S   ე       ით              ე
-SFX S   0       თი              [ოუ]
-SFX S   ი       ად              ი
-SFX S   0       ად              ა
-SFX S   ე       ად              ე
-SFX S   0       დ               [ოუ]
-SFX S   0       სი              [ოუ]
-SFX S   ა       ისა             ა
-SFX S   ე       ისა             ე
-SFX S   0       თა              ი
-SFX S   ა       ითა             ა
-SFX S   ე       ითა             ე
-SFX S   ი       ადა             ი
-SFX S   0       ადა             ა
-SFX S   ე       ადა             ე
-SFX S   0       და              [ოუ]
-SFX S   ა       ისაც            ა           # Others
-SFX S   ე       ისაც            ე
-SFX S   0       თაც             ი
-SFX S   ა       ითაც            ა
-SFX S   ე       ითაც            ე
-SFX S   0       თიც             [ოუ]
-SFX S   0       სთვის           [იოუ]
-SFX S   ა       ისთვის          ა
-SFX S   ე       ისთვის          ე
-SFX S   0       სგან            [იოუ]
-SFX S   ა       ისგან           ა
-SFX S   ე       ისგან           ე
-SFX S   0       სკენ            [იოუ]
-SFX S   ა       ისკენ           ა
-SFX S   ე       ისკენ           ე
-SFX S   0       სათვის          [იოუ]
-SFX S   ა       ისათვის         ა
-SFX S   ე       ისათვის         ე
-SFX S   0       საგან           [იოუ]
-SFX S   ა       ისაგან          ა
-SFX S   ე       ისაგან          ე
-SFX S   0       საკენ           [იოუ]
-SFX S   ა       ისაკენ          ა
-SFX S   ე       ისაკენ          ე
-SFX S   ი       ამდე            ი
-SFX S   0       ამდე            ა
-SFX S   ე       ამდე            ე
-SFX S   0       მდე             [ოუ]
-SFX S   ი       ამდის           ი
-SFX S   0       ამდის           ა
-SFX S   ე       ამდის           ე
-SFX S   0       მდის            [ოუ]
+SFX NS Y 53
+SFX NS   0       ს              [იოუ]
+SFX NS   ა       ის              ა
+SFX NS   ე       ის              ე
+SFX NS   0       თ               ი
+SFX NS   ა       ით              ა
+SFX NS   ე       ით              ე
+SFX NS   0       თი              [ოუ]
+SFX NS   ი       ად              ი
+SFX NS   0       ად              ა
+SFX NS   ე       ად              ე
+SFX NS   0       დ               [ოუ]
+SFX NS   0       სი              [ოუ]
+SFX NS   ა       ისა             ა
+SFX NS   ე       ისა             ე
+SFX NS   0       თა              ი
+SFX NS   ა       ითა             ა
+SFX NS   ე       ითა             ე
+SFX NS   ი       ადა             ი
+SFX NS   0       ადა             ა
+SFX NS   ე       ადა             ე
+SFX NS   0       და              [ოუ]
+SFX NS   ა       ისაც            ა           # Others
+SFX NS   ე       ისაც            ე
+SFX NS   0       თაც             ი
+SFX NS   ა       ითაც            ა
+SFX NS   ე       ითაც            ე
+SFX NS   0       თიც             [ოუ]
+SFX NS   0       სთვის           [იოუ]
+SFX NS   ა       ისთვის          ა
+SFX NS   ე       ისთვის          ე
+SFX NS   0       სგან            [იოუ]
+SFX NS   ა       ისგან           ა
+SFX NS   ე       ისგან           ე
+SFX NS   0       სკენ            [იოუ]
+SFX NS   ა       ისკენ           ა
+SFX NS   ე       ისკენ           ე
+SFX NS   0       სათვის          [იოუ]
+SFX NS   ა       ისათვის         ა
+SFX NS   ე       ისათვის         ე
+SFX NS   0       საგან           [იოუ]
+SFX NS   ა       ისაგან          ა
+SFX NS   ე       ისაგან          ე
+SFX NS   0       საკენ           [იოუ]
+SFX NS   ა       ისაკენ          ა
+SFX NS   ე       ისაკენ          ე
+SFX NS   ი       ამდე            ი
+SFX NS   0       ამდე            ა
+SFX NS   ე       ამდე            ე
+SFX NS   0       მდე             [ოუ]
+SFX NS   ი       ამდის           ი
+SFX NS   0       ამდის           ა
+SFX NS   ე       ამდის           ე
+SFX NS   0       მდის            [ოუ]
 
 # plural forms
-SFX P Y 78
-SFX P   ი       ები             ი               # Plural cases
-SFX P   ა       ები             ა
-SFX P   0       ები             [ეოუ]
-SFX P   ი       ების            ი
-SFX P   ა       ების            ა
-SFX P   0       ების            [ეოუ]
-SFX P   ი       ებისა           ი
-SFX P   ა       ებისა           ა
-SFX P   0       ებისა           [ეოუ]
-SFX P   ი       ებს             ი
-SFX P   ა       ებს             ა
-SFX P   0       ებს             [ეოუ]
-SFX P   ი       ებმა            ი
-SFX P   ა       ებმა            ა
-SFX P   0       ებმა            [ეოუ]
-SFX P   ი       ებო             ი
-SFX P   ა       ებო             ა
-SFX P   0       ებო             [ეოუ]
-SFX P   ი       ებით            ი
-SFX P   ა       ებით            ა
-SFX P   0       ებით            [ეოუ]
-SFX P   ი       ებითა           ი
-SFX P   ა       ებითა           ა
-SFX P   0       ებითა           [ეოუ]
-SFX P   ი       ებად            ი
-SFX P   ა       ებად            ა
-SFX P   0       ებად            [ეოუ]
-SFX P   ი       ებში            ი               # others plural
-SFX P   ა       ებში            ა
-SFX P   0       ებში            [ეოუ]
-SFX P   ი       ებიც            ი
-SFX P   ა       ებიც            ა
-SFX P   0       ებიც            [ეოუ]
-SFX P   ი       ებისაც          ი
-SFX P   ა       ებისაც          ა
-SFX P   0       ებისაც          [ეოუ]
-SFX P   ი       ებმაც           ი
-SFX P   ა       ებმაც           ა
-SFX P   0       ებმაც           [ეოუ]
-SFX P   ი       ებითაც          ი
-SFX P   ა       ებითაც          ა
-SFX P   0       ებითაც          [ეოუ]
-SFX P   ი       ებივით          ი
-SFX P   ა       ებივით          ა
-SFX P   0       ებივით          [ეოუ]
-SFX P   ი       ებზე            ი
-SFX P   ა       ებზე            ა
-SFX P   0       ებზე            [ეოუ]
-SFX P   ი       ებთან           ი
-SFX P   ა       ებთან           ა
-SFX P   0       ებთან           [ეოუ]
-SFX P   ი       ებისთვის        ი
-SFX P   ა       ებისთვის        ა
-SFX P   0       ებისთვის        [ეოუ]
-SFX P   ი       ებისგან         ი
-SFX P   ა       ებისგან         ა
-SFX P   0       ებისგან         [ეოუ]
-SFX P   ი       ებისკენ         ი
-SFX P   ა       ებისკენ         ა
-SFX P   0       ებისკენ         [ეოუ]
-SFX P   ი       ებისათვის       ი
-SFX P   ა       ებისათვის       ა
-SFX P   0       ებისათვის       [ეოუ]
-SFX P   ი       ებისაგან        ი
-SFX P   ა       ებისაგან        ა
-SFX P   0       ებისაგან        [ეოუ]
-SFX P   ი       ებისაკენ        ი
-SFX P   ა       ებისაკენ        ა
-SFX P   0       ებისაკენ        [ეოუ]
-SFX P   ი       ებიდან          ი
-SFX P   ა       ებიდან          ა
-SFX P   0       ებიდან          [ეოუ]
-SFX P   ი       ებამდე          ი
-SFX P   ა       ებამდე          ა
-SFX P   0       ებამდე          [ეოუ]
-SFX P   ი       ებამდის         ი
-SFX P   ა       ებამდის         ა
-SFX P   0       ებამდის         [ეოუ]
+SFX NP Y 78
+SFX NP   ი       ები             ი               # Plural cases
+SFX NP   ა       ები             ა
+SFX NP   0       ები             [ეოუ]
+SFX NP   ი       ების            ი
+SFX NP   ა       ების            ა
+SFX NP   0       ების            [ეოუ]
+SFX NP   ი       ებისა           ი
+SFX NP   ა       ებისა           ა
+SFX NP   0       ებისა           [ეოუ]
+SFX NP   ი       ებს             ი
+SFX NP   ა       ებს             ა
+SFX NP   0       ებს             [ეოუ]
+SFX NP   ი       ებმა            ი
+SFX NP   ა       ებმა            ა
+SFX NP   0       ებმა            [ეოუ]
+SFX NP   ი       ებო             ი
+SFX NP   ა       ებო             ა
+SFX NP   0       ებო             [ეოუ]
+SFX NP   ი       ებით            ი
+SFX NP   ა       ებით            ა
+SFX NP   0       ებით            [ეოუ]
+SFX NP   ი       ებითა           ი
+SFX NP   ა       ებითა           ა
+SFX NP   0       ებითა           [ეოუ]
+SFX NP   ი       ებად            ი
+SFX NP   ა       ებად            ა
+SFX NP   0       ებად            [ეოუ]
+SFX NP   ი       ებში            ი               # others plural
+SFX NP   ა       ებში            ა
+SFX NP   0       ებში            [ეოუ]
+SFX NP   ი       ებიც            ი
+SFX NP   ა       ებიც            ა
+SFX NP   0       ებიც            [ეოუ]
+SFX NP   ი       ებისაც          ი
+SFX NP   ა       ებისაც          ა
+SFX NP   0       ებისაც          [ეოუ]
+SFX NP   ი       ებმაც           ი
+SFX NP   ა       ებმაც           ა
+SFX NP   0       ებმაც           [ეოუ]
+SFX NP   ი       ებითაც          ი
+SFX NP   ა       ებითაც          ა
+SFX NP   0       ებითაც          [ეოუ]
+SFX NP   ი       ებივით          ი
+SFX NP   ა       ებივით          ა
+SFX NP   0       ებივით          [ეოუ]
+SFX NP   ი       ებზე            ი
+SFX NP   ა       ებზე            ა
+SFX NP   0       ებზე            [ეოუ]
+SFX NP   ი       ებთან           ი
+SFX NP   ა       ებთან           ა
+SFX NP   0       ებთან           [ეოუ]
+SFX NP   ი       ებისთვის        ი
+SFX NP   ა       ებისთვის        ა
+SFX NP   0       ებისთვის        [ეოუ]
+SFX NP   ი       ებისგან         ი
+SFX NP   ა       ებისგან         ა
+SFX NP   0       ებისგან         [ეოუ]
+SFX NP   ი       ებისკენ         ი
+SFX NP   ა       ებისკენ         ა
+SFX NP   0       ებისკენ         [ეოუ]
+SFX NP   ი       ებისათვის       ი
+SFX NP   ა       ებისათვის       ა
+SFX NP   0       ებისათვის       [ეოუ]
+SFX NP   ი       ებისაგან        ი
+SFX NP   ა       ებისაგან        ა
+SFX NP   0       ებისაგან        [ეოუ]
+SFX NP   ი       ებისაკენ        ი
+SFX NP   ა       ებისაკენ        ა
+SFX NP   0       ებისაკენ        [ეოუ]
+SFX NP   ი       ებიდან          ი
+SFX NP   ა       ებიდან          ა
+SFX NP   0       ებიდან          [ეოუ]
+SFX NP   ი       ებამდე          ი
+SFX NP   ა       ებამდე          ა
+SFX NP   0       ებამდე          [ეოუ]
+SFX NP   ი       ებამდის         ი
+SFX NP   ა       ებამდის         ა
+SFX NP   0       ებამდის         [ეოუ]
 
 # normal stem (მეგობარო)
-SFX N Y 34
-SFX N   ი       მა              ი               # cases
-SFX N   0       მა              [აეოუ]
-SFX N   ი       ს               ი
-SFX N   0       ს               [აეოუ]
-SFX N   ი       ო               ი
-SFX N   0       ო               [აუ]
-SFX N   0       ვ               [ეო]
-SFX N   ი       სა              ი
-SFX N   0       სა              [აეოუ]
-SFX N   0       სა              ი
-SFX N   ი       ნი              ი               # How about non-ი words?
-SFX N   ი       თა              ი
-SFX N   ი       თო              ი
-SFX N   ი       ში              ი               # others
-SFX N   0       ში              [აეოუ]
-SFX N   0       ც               .
-SFX N   0       ცა              .
-SFX N   ი       მაც             ი
-SFX N   0       მაც             [აეოუ]
-SFX N   ი       საც             ი
-SFX N   0       საც             [აეოუ]
-SFX N   0       საც             ი
-SFX N   0       სიც             [ოუ]
-SFX N   ი       შიც             ი
-SFX N   0       შიც             [აეოუ]
-SFX N   ი       ვით             ი
-SFX N   0       სავით           [აეოუ]
-SFX N   ი       ზე              ი
-SFX N   0       ზე              [აეოუ]
-SFX N   ი       თან             ი
-SFX N   0       სთან            [აეოუ]
-SFX N   ა       იდან            ა
-SFX N   ე       იდან            ე
-SFX N   0       დან             [ოუ]
+SFX NN Y 34
+SFX NN   ი       მა              ი               # cases
+SFX NN   0       მა              [აეოუ]
+SFX NN   ი       ს               ი
+SFX NN   0       ს               [აეოუ]
+SFX NN   ი       ო               ი
+SFX NN   0       ო               [აუ]
+SFX NN   0       ვ               [ეო]
+SFX NN   ი       სა              ი
+SFX NN   0       სა              [აეოუ]
+SFX NN   0       სა              ი
+SFX NN   ი       ნი              ი               # How about non-ი words?
+SFX NN   ი       თა              ი
+SFX NN   ი       თო              ი
+SFX NN   ი       ში              ი               # others
+SFX NN   0       ში              [აეოუ]
+SFX NN   0       ც               .
+SFX NN   0       ცა              .
+SFX NN   ი       მაც             ი
+SFX NN   0       მაც             [აეოუ]
+SFX NN   ი       საც             ი
+SFX NN   0       საც             [აეოუ]
+SFX NN   0       საც             ი
+SFX NN   0       სიც             [ოუ]
+SFX NN   ი       შიც             ი
+SFX NN   0       შიც             [აეოუ]
+SFX NN   ი       ვით             ი
+SFX NN   0       სავით           [აეოუ]
+SFX NN   ი       ზე              ი
+SFX NN   0       ზე              [აეოუ]
+SFX NN   ი       თან             ი
+SFX NN   0       სთან            [აეოუ]
+SFX NN   ა       იდან            ა
+SFX NN   ე       იდან            ე
+SFX NN   0       დან             [ოუ]
 
+
+#########
+# Verbs #
+#########
+
+ 
+
+
+
+
+
+
+
+
+#############################################
+# Verb Prefixes (Preverb + Personal Prefix) #
+#############################################
+
+
+
+
+
+
+PFX 0I Y 1
+PFX 0I 0       მი/&x     .
+
+PFX 1I Y 1
+PFX 1I 0       მივ/&x     .
+
+PFX 2I Y 1
+PFX 2I 0       მიმ/&x     .
+
+PFX 3I Y 1
+PFX 3I 0       მიგ/&x     .
+
+PFX 4I Y 3
+PFX 4I 0       მის/&x        [დტთძწცჯჭჩ]
+PFX 4I 0       მიჰ/&x        [გკქგყ]
+PFX 4I 0       მი/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5I Y 1
+PFX 5I 0       მიგვ/&x    .
+
+PFX 6I Y 1
+PFX 6I 0       მიმი/&x    .
+
+PFX 7I Y 1
+PFX 7I 0       მიგი/&x    .
+
+PFX 8I Y 1
+PFX 8I 0       მიგვი/&x   .
+
+PFX 9I Y 1
+PFX 9I 0       მიუ/&x     .
+  
+PFX 0o Y 1
+PFX 0o 0       მო/&x     .
+
+PFX 1o Y 1
+PFX 1o 0       მოვ/&x     .
+
+PFX 2o Y 1
+PFX 2o 0       მომ/&x     .
+
+PFX 3o Y 1
+PFX 3o 0       მოგ/&x     .
+
+PFX 4o Y 3
+PFX 4o 0       მოს/&x        [დტთძწცჯჭჩ]
+PFX 4o 0       მოჰ/&x        [გკქგყ]
+PFX 4o 0       მო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5o Y 1
+PFX 5o 0       მოგვ/&x    .
+
+PFX 6o Y 1
+PFX 6o 0       მომი/&x    .
+
+PFX 7o Y 1
+PFX 7o 0       მოგი/&x    .
+
+PFX 8o Y 1
+PFX 8o 0       მოგვი/&x   .
+
+PFX 9o Y 1
+PFX 9o 0       მოუ/&x     .
+  
+PFX 0A Y 1
+PFX 0A 0       ა/&x     .
+
+PFX 1A Y 1
+PFX 1A 0       ავ/&x     .
+
+PFX 2A Y 1
+PFX 2A 0       ამ/&x     .
+
+PFX 3A Y 1
+PFX 3A 0       აგ/&x     .
+
+PFX 4A Y 3
+PFX 4A 0       ას/&x        [დტთძწცჯჭჩ]
+PFX 4A 0       აჰ/&x        [გკქგყ]
+PFX 4A 0       ა/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5A Y 1
+PFX 5A 0       აგვ/&x    .
+
+PFX 6A Y 1
+PFX 6A 0       ამი/&x    .
+
+PFX 7A Y 1
+PFX 7A 0       აგი/&x    .
+
+PFX 8A Y 1
+PFX 8A 0       აგვი/&x   .
+
+PFX 9A Y 1
+PFX 9A 0       აუ/&x     .
+  
+PFX 0C Y 1
+PFX 0C 0       ჩა/&x     .
+
+PFX 1C Y 1
+PFX 1C 0       ჩავ/&x     .
+
+PFX 2C Y 1
+PFX 2C 0       ჩამ/&x     .
+
+PFX 3C Y 1
+PFX 3C 0       ჩაგ/&x     .
+
+PFX 4C Y 3
+PFX 4C 0       ჩას/&x        [დტთძწცჯჭჩ]
+PFX 4C 0       ჩაჰ/&x        [გკქგყ]
+PFX 4C 0       ჩა/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5C Y 1
+PFX 5C 0       ჩაგვ/&x    .
+
+PFX 6C Y 1
+PFX 6C 0       ჩამი/&x    .
+
+PFX 7C Y 1
+PFX 7C 0       ჩაგი/&x    .
+
+PFX 8C Y 1
+PFX 8C 0       ჩაგვი/&x   .
+
+PFX 9C Y 1
+PFX 9C 0       ჩაუ/&x     .
+  
+PFX 0a Y 1
+PFX 0a 0       ამო/&x     .
+
+PFX 1a Y 1
+PFX 1a 0       ამოვ/&x     .
+
+PFX 2a Y 1
+PFX 2a 0       ამომ/&x     .
+
+PFX 3a Y 1
+PFX 3a 0       ამოგ/&x     .
+
+PFX 4a Y 3
+PFX 4a 0       ამოს/&x        [დტთძწცჯჭჩ]
+PFX 4a 0       ამოჰ/&x        [გკქგყ]
+PFX 4a 0       ამო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5a Y 1
+PFX 5a 0       ამოგვ/&x    .
+
+PFX 6a Y 1
+PFX 6a 0       ამომი/&x    .
+
+PFX 7a Y 1
+PFX 7a 0       ამოგი/&x    .
+
+PFX 8a Y 1
+PFX 8a 0       ამოგვი/&x   .
+
+PFX 9a Y 1
+PFX 9a 0       ამოუ/&x     .
+  
+PFX 0c Y 1
+PFX 0c 0       ჩამო/&x     .
+
+PFX 1c Y 1
+PFX 1c 0       ჩამოვ/&x     .
+
+PFX 2c Y 1
+PFX 2c 0       ჩამომ/&x     .
+
+PFX 3c Y 1
+PFX 3c 0       ჩამოგ/&x     .
+
+PFX 4c Y 3
+PFX 4c 0       ჩამოს/&x        [დტთძწცჯჭჩ]
+PFX 4c 0       ჩამოჰ/&x        [გკქგყ]
+PFX 4c 0       ჩამო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5c Y 1
+PFX 5c 0       ჩამოგვ/&x    .
+
+PFX 6c Y 1
+PFX 6c 0       ჩამომი/&x    .
+
+PFX 7c Y 1
+PFX 7c 0       ჩამოგი/&x    .
+
+PFX 8c Y 1
+PFX 8c 0       ჩამოგვი/&x   .
+
+PFX 9c Y 1
+PFX 9c 0       ჩამოუ/&x     .
+  
+PFX 0E Y 1
+PFX 0E 0       შე/&x     .
+
+PFX 1E Y 1
+PFX 1E 0       შევ/&x     .
+
+PFX 2E Y 1
+PFX 2E 0       შემ/&x     .
+
+PFX 3E Y 1
+PFX 3E 0       შეგ/&x     .
+
+PFX 4E Y 3
+PFX 4E 0       შეს/&x        [დტთძწცჯჭჩ]
+PFX 4E 0       შეჰ/&x        [გკქგყ]
+PFX 4E 0       შე/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5E Y 1
+PFX 5E 0       შეგვ/&x    .
+
+PFX 6E Y 1
+PFX 6E 0       შემი/&x    .
+
+PFX 7E Y 1
+PFX 7E 0       შეგი/&x    .
+
+PFX 8E Y 1
+PFX 8E 0       შეგვი/&x   .
+
+PFX 9E Y 1
+PFX 9E 0       შეუ/&x     .
+  
+PFX 0G Y 1
+PFX 0G 0       გა/&x     .
+
+PFX 1G Y 1
+PFX 1G 0       გავ/&x     .
+
+PFX 2G Y 1
+PFX 2G 0       გამ/&x     .
+
+PFX 3G Y 1
+PFX 3G 0       გაგ/&x     .
+
+PFX 4G Y 3
+PFX 4G 0       გას/&x        [დტთძწცჯჭჩ]
+PFX 4G 0       გაჰ/&x        [გკქგყ]
+PFX 4G 0       გა/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5G Y 1
+PFX 5G 0       გაგვ/&x    .
+
+PFX 6G Y 1
+PFX 6G 0       გამი/&x    .
+
+PFX 7G Y 1
+PFX 7G 0       გაგი/&x    .
+
+PFX 8G Y 1
+PFX 8G 0       გაგვი/&x   .
+
+PFX 9G Y 1
+PFX 9G 0       გაუ/&x     .
+  
+PFX 0e Y 1
+PFX 0e 0       შემო/&x     .
+
+PFX 1e Y 1
+PFX 1e 0       შემოვ/&x     .
+
+PFX 2e Y 1
+PFX 2e 0       შემომ/&x     .
+
+PFX 3e Y 1
+PFX 3e 0       შემოგ/&x     .
+
+PFX 4e Y 3
+PFX 4e 0       შემოს/&x        [დტთძწცჯჭჩ]
+PFX 4e 0       შემოჰ/&x        [გკქგყ]
+PFX 4e 0       შემო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5e Y 1
+PFX 5e 0       შემოგვ/&x    .
+
+PFX 6e Y 1
+PFX 6e 0       შემომი/&x    .
+
+PFX 7e Y 1
+PFX 7e 0       შემოგი/&x    .
+
+PFX 8e Y 1
+PFX 8e 0       შემოგვი/&x   .
+
+PFX 9e Y 1
+PFX 9e 0       შემოუ/&x     .
+  
+PFX 0g Y 1
+PFX 0g 0       გამო/&x     .
+
+PFX 1g Y 1
+PFX 1g 0       გამოვ/&x     .
+
+PFX 2g Y 1
+PFX 2g 0       გამომ/&x     .
+
+PFX 3g Y 1
+PFX 3g 0       გამოგ/&x     .
+
+PFX 4g Y 3
+PFX 4g 0       გამოს/&x        [დტთძწცჯჭჩ]
+PFX 4g 0       გამოჰ/&x        [გკქგყ]
+PFX 4g 0       გამო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5g Y 1
+PFX 5g 0       გამოგვ/&x    .
+
+PFX 6g Y 1
+PFX 6g 0       გამომი/&x    .
+
+PFX 7g Y 1
+PFX 7g 0       გამოგი/&x    .
+
+PFX 8g Y 1
+PFX 8g 0       გამოგვი/&x   .
+
+PFX 9g Y 1
+PFX 9g 0       გამოუ/&x     .
+  
+PFX 0X Y 1
+PFX 0X 0       გადა/&x     .
+
+PFX 1X Y 1
+PFX 1X 0       გადავ/&x     .
+
+PFX 2X Y 1
+PFX 2X 0       გადამ/&x     .
+
+PFX 3X Y 1
+PFX 3X 0       გადაგ/&x     .
+
+PFX 4X Y 3
+PFX 4X 0       გადას/&x        [დტთძწცჯჭჩ]
+PFX 4X 0       გადაჰ/&x        [გკქგყ]
+PFX 4X 0       გადა/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5X Y 1
+PFX 5X 0       გადაგვ/&x    .
+
+PFX 6X Y 1
+PFX 6X 0       გადამი/&x    .
+
+PFX 7X Y 1
+PFX 7X 0       გადაგი/&x    .
+
+PFX 8X Y 1
+PFX 8X 0       გადაგვი/&x   .
+
+PFX 9X Y 1
+PFX 9X 0       გადაუ/&x     .
+  
+PFX 0x Y 1
+PFX 0x 0       გადმო/&x     .
+
+PFX 1x Y 1
+PFX 1x 0       გადმოვ/&x     .
+
+PFX 2x Y 1
+PFX 2x 0       გადმომ/&x     .
+
+PFX 3x Y 1
+PFX 3x 0       გადმოგ/&x     .
+
+PFX 4x Y 3
+PFX 4x 0       გადმოს/&x        [დტთძწცჯჭჩ]
+PFX 4x 0       გადმოჰ/&x        [გკქგყ]
+PFX 4x 0       გადმო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5x Y 1
+PFX 5x 0       გადმოგვ/&x    .
+
+PFX 6x Y 1
+PFX 6x 0       გადმომი/&x    .
+
+PFX 7x Y 1
+PFX 7x 0       გადმოგი/&x    .
+
+PFX 8x Y 1
+PFX 8x 0       გადმოგვი/&x   .
+
+PFX 9x Y 1
+PFX 9x 0       გადმოუ/&x     .
+  
+PFX 0W Y 1
+PFX 0W 0       წა/&x     .
+
+PFX 1W Y 1
+PFX 1W 0       წავ/&x     .
+
+PFX 2W Y 1
+PFX 2W 0       წამ/&x     .
+
+PFX 3W Y 1
+PFX 3W 0       წაგ/&x     .
+
+PFX 4W Y 3
+PFX 4W 0       წას/&x        [დტთძწცჯჭჩ]
+PFX 4W 0       წაჰ/&x        [გკქგყ]
+PFX 4W 0       წა/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5W Y 1
+PFX 5W 0       წაგვ/&x    .
+
+PFX 6W Y 1
+PFX 6W 0       წამი/&x    .
+
+PFX 7W Y 1
+PFX 7W 0       წაგი/&x    .
+
+PFX 8W Y 1
+PFX 8W 0       წაგვი/&x   .
+
+PFX 9W Y 1
+PFX 9W 0       წაუ/&x     .
+  
+PFX 0w Y 1
+PFX 0w 0       წამო/&x     .
+
+PFX 1w Y 1
+PFX 1w 0       წამოვ/&x     .
+
+PFX 2w Y 1
+PFX 2w 0       წამომ/&x     .
+
+PFX 3w Y 1
+PFX 3w 0       წამოგ/&x     .
+
+PFX 4w Y 3
+PFX 4w 0       წამოს/&x        [დტთძწცჯჭჩ]
+PFX 4w 0       წამოჰ/&x        [გკქგყ]
+PFX 4w 0       წამო/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5w Y 1
+PFX 5w 0       წამოგვ/&x    .
+
+PFX 6w Y 1
+PFX 6w 0       წამომი/&x    .
+
+PFX 7w Y 1
+PFX 7w 0       წამოგი/&x    .
+
+PFX 8w Y 1
+PFX 8w 0       წამოგვი/&x   .
+
+PFX 9w Y 1
+PFX 9w 0       წამოუ/&x     .
+  
+PFX 0n Y 1
+PFX 0n 0       და/&x     .
+
+PFX 1n Y 1
+PFX 1n 0       დავ/&x     .
+
+PFX 2n Y 1
+PFX 2n 0       დამ/&x     .
+
+PFX 3n Y 1
+PFX 3n 0       დაგ/&x     .
+
+PFX 4n Y 3
+PFX 4n 0       დას/&x        [დტთძწცჯჭჩ]
+PFX 4n 0       დაჰ/&x        [გკქგყ]
+PFX 4n 0       და/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5n Y 1
+PFX 5n 0       დაგვ/&x    .
+
+PFX 6n Y 1
+PFX 6n 0       დამი/&x    .
+
+PFX 7n Y 1
+PFX 7n 0       დაგი/&x    .
+
+PFX 8n Y 1
+PFX 8n 0       დაგვი/&x   .
+
+PFX 9n Y 1
+PFX 9n 0       დაუ/&x     .
+  
+PFX 0N Y 1
+PFX 0N 0       0/&x     .
+
+PFX 1N Y 1
+PFX 1N 0       ვ/&x     .
+
+PFX 2N Y 1
+PFX 2N 0       მ/&x     .
+
+PFX 3N Y 1
+PFX 3N 0       გ/&x     .
+
+PFX 4N Y 3
+PFX 4N 0       ს/&x        [დტთძწცჯჭჩ]
+PFX 4N 0       ჰ/&x        [გკქგყ]
+PFX 4N 0       0/&x [^დტთძწცჯჭჩგკქგყ]
+
+PFX 5N Y 1
+PFX 5N 0       გვ/&x    .
+
+PFX 6N Y 1
+PFX 6N 0       მი/&x    .
+
+PFX 7N Y 1
+PFX 7N 0       გი/&x    .
+
+PFX 8N Y 1
+PFX 8N 0       გვი/&x   .
+
+PFX 9N Y 1
+PFX 9N 0       უ/&x     .
+  
+
+
+############################
+# Present and Future Tense #
+############################
+
+
+
+SFX PI Y 7
+SFX PI 0       0/&x1I         .
+SFX PI 0       0/&x0I         .
+SFX PI 0       ს/&x0I         .
+SFX PI 0       თ/&x1I         .
+SFX PI 0       თ/&x0I         .
+SFX PI 0       ენ/&x0I        [^ი]
+SFX PI 0       ან/&x0I        ი
+  
+SFX Po Y 7
+SFX Po 0       0/&x1o         .
+SFX Po 0       0/&x0o         .
+SFX Po 0       ს/&x0o         .
+SFX Po 0       თ/&x1o         .
+SFX Po 0       თ/&x0o         .
+SFX Po 0       ენ/&x0o        [^ი]
+SFX Po 0       ან/&x0o        ი
+  
+SFX PA Y 7
+SFX PA 0       0/&x1A         .
+SFX PA 0       0/&x0A         .
+SFX PA 0       ს/&x0A         .
+SFX PA 0       თ/&x1A         .
+SFX PA 0       თ/&x0A         .
+SFX PA 0       ენ/&x0A        [^ი]
+SFX PA 0       ან/&x0A        ი
+  
+SFX PC Y 7
+SFX PC 0       0/&x1C         .
+SFX PC 0       0/&x0C         .
+SFX PC 0       ს/&x0C         .
+SFX PC 0       თ/&x1C         .
+SFX PC 0       თ/&x0C         .
+SFX PC 0       ენ/&x0C        [^ი]
+SFX PC 0       ან/&x0C        ი
+  
+SFX Pa Y 7
+SFX Pa 0       0/&x1a         .
+SFX Pa 0       0/&x0a         .
+SFX Pa 0       ს/&x0a         .
+SFX Pa 0       თ/&x1a         .
+SFX Pa 0       თ/&x0a         .
+SFX Pa 0       ენ/&x0a        [^ი]
+SFX Pa 0       ან/&x0a        ი
+  
+SFX Pc Y 7
+SFX Pc 0       0/&x1c         .
+SFX Pc 0       0/&x0c         .
+SFX Pc 0       ს/&x0c         .
+SFX Pc 0       თ/&x1c         .
+SFX Pc 0       თ/&x0c         .
+SFX Pc 0       ენ/&x0c        [^ი]
+SFX Pc 0       ან/&x0c        ი
+  
+SFX PE Y 7
+SFX PE 0       0/&x1E         .
+SFX PE 0       0/&x0E         .
+SFX PE 0       ს/&x0E         .
+SFX PE 0       თ/&x1E         .
+SFX PE 0       თ/&x0E         .
+SFX PE 0       ენ/&x0E        [^ი]
+SFX PE 0       ან/&x0E        ი
+  
+SFX PG Y 7
+SFX PG 0       0/&x1G         .
+SFX PG 0       0/&x0G         .
+SFX PG 0       ს/&x0G         .
+SFX PG 0       თ/&x1G         .
+SFX PG 0       თ/&x0G         .
+SFX PG 0       ენ/&x0G        [^ი]
+SFX PG 0       ან/&x0G        ი
+  
+SFX Pe Y 7
+SFX Pe 0       0/&x1e         .
+SFX Pe 0       0/&x0e         .
+SFX Pe 0       ს/&x0e         .
+SFX Pe 0       თ/&x1e         .
+SFX Pe 0       თ/&x0e         .
+SFX Pe 0       ენ/&x0e        [^ი]
+SFX Pe 0       ან/&x0e        ი
+  
+SFX Pg Y 7
+SFX Pg 0       0/&x1g         .
+SFX Pg 0       0/&x0g         .
+SFX Pg 0       ს/&x0g         .
+SFX Pg 0       თ/&x1g         .
+SFX Pg 0       თ/&x0g         .
+SFX Pg 0       ენ/&x0g        [^ი]
+SFX Pg 0       ან/&x0g        ი
+  
+SFX PX Y 7
+SFX PX 0       0/&x1X         .
+SFX PX 0       0/&x0X         .
+SFX PX 0       ს/&x0X         .
+SFX PX 0       თ/&x1X         .
+SFX PX 0       თ/&x0X         .
+SFX PX 0       ენ/&x0X        [^ი]
+SFX PX 0       ან/&x0X        ი
+  
+SFX Px Y 7
+SFX Px 0       0/&x1x         .
+SFX Px 0       0/&x0x         .
+SFX Px 0       ს/&x0x         .
+SFX Px 0       თ/&x1x         .
+SFX Px 0       თ/&x0x         .
+SFX Px 0       ენ/&x0x        [^ი]
+SFX Px 0       ან/&x0x        ი
+  
+SFX PW Y 7
+SFX PW 0       0/&x1W         .
+SFX PW 0       0/&x0W         .
+SFX PW 0       ს/&x0W         .
+SFX PW 0       თ/&x1W         .
+SFX PW 0       თ/&x0W         .
+SFX PW 0       ენ/&x0W        [^ი]
+SFX PW 0       ან/&x0W        ი
+  
+SFX Pw Y 7
+SFX Pw 0       0/&x1w         .
+SFX Pw 0       0/&x0w         .
+SFX Pw 0       ს/&x0w         .
+SFX Pw 0       თ/&x1w         .
+SFX Pw 0       თ/&x0w         .
+SFX Pw 0       ენ/&x0w        [^ი]
+SFX Pw 0       ან/&x0w        ი
+  
+SFX Pn Y 7
+SFX Pn 0       0/&x1n         .
+SFX Pn 0       0/&x0n         .
+SFX Pn 0       ს/&x0n         .
+SFX Pn 0       თ/&x1n         .
+SFX Pn 0       თ/&x0n         .
+SFX Pn 0       ენ/&x0n        [^ი]
+SFX Pn 0       ან/&x0n        ი
+  
+SFX PN Y 7
+SFX PN 0       0/&x1N         .
+SFX PN 0       0/&x0N         .
+SFX PN 0       ს/&x0N         .
+SFX PN 0       თ/&x1N         .
+SFX PN 0       თ/&x0N         .
+SFX PN 0       ენ/&x0N        [^ი]
+SFX PN 0       ან/&x0N        ი
+  
+
+# vim: set ts=8 et:
 
 # Rules for unidentified words.
 
-PFX 3 Y 1
-PFX 3   0       ა       .
+PFX x3 Y 1
+PFX x3   0       ა       .
 
-PFX 2 Y 1
-PFX 2   0       მი      .
+PFX x2 Y 1
+PFX x2   0       მი      .
 
-PFX 1 Y 1
-PFX 1   0       და      .
+PFX x1 Y 1
+PFX x1   0       და      .
 
-PFX 0 Y 1
-PFX 0   0       გა      .
+PFX x0 Y 1
+PFX x0   0       გა      .
 
-SFX 9 Y 1
-SFX 9   0       ა			.
+SFX x9 Y 1
+SFX x9   0       ა			.
 
-SFX 8 Y 2
-SFX 8   ი       ს              ი  
-SFX 8   0       ს              [^ი]
+SFX x8 Y 2
+SFX x8   ი       ს              ი  
+SFX x8   0       ს              [^ი]
 
-SFX 7 Y 4
-SFX 7   0       ს              	[იოუ]  
-SFX 7   ა       ის              ა  
-SFX 7   ე       ის              ე  
-SFX 7   0       ის              [^აეიოუ]
+SFX x7 Y 4
+SFX x7   0       ს              	[იოუ]  
+SFX x7   ა       ის              ა  
+SFX x7   ე       ის              ე  
+SFX x7   0       ის              [^აეიოუ]
 
-SFX 6 Y 3
-SFX 6   ი       ებს             ი
-SFX 6   ა       ებს             ა
-SFX 6   0       ებს             [^აი]
+SFX x6 Y 3
+SFX x6   ი       ებს             ი
+SFX x6   ა       ებს             ა
+SFX x6   0       ებს             [^აი]
 
-SFX 5 Y 3
-SFX 5   ი       ები             ი
-SFX 5   ა       ები             ა
-SFX 5   0       ები             [^აი]
+SFX x5 Y 3
+SFX x5   ი       ები             ი
+SFX x5   ა       ები             ა
+SFX x5   0       ები             [^აი]
 
-SFX 4 Y 3
-SFX 4   ი       ების            ი
-SFX 4   ა       ების            ა
-SFX 4   0       ების            [^აი]
+SFX x4 Y 3
+SFX x4   ი       ების            ი
+SFX x4   ა       ების            ა
+SFX x4   0       ების            [^აი]
 
 # vim: set ts=8 et:

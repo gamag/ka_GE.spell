@@ -22,7 +22,7 @@
 # (e.g. P (1n 2x) -> P (2n 3x))
 
 # Plurals. Make sure we don't get Verbs by requiring at least one like ში
-P (1n 2x) {
+NP (1n 2x) {
 
 ი,ა       ები            (1n)
 ე,ო,უ     .ები           (1n)
@@ -82,7 +82,7 @@ P (1n 2x) {
 
 
 # Syncope plurals. Make sure we don't get verbs by requiring at least one like ში
-P (1n 2x v) {
+NP (1n 2x v) {
 
 ი         ები            (1n)
 ი         ების           (1n)
@@ -116,7 +116,7 @@ P (1n 2x v) {
 
 
 # no syncope
-SN (2s 2n) {
+NSNN (2s 2n) {
 
 ი,ო,უ     .ს             (1s)
 ა,ე       ის             (1s)
@@ -185,7 +185,7 @@ SN (2s 2n) {
 
 
 # syncope
-S (1a 2b v) {
+NS (1a 2b v) {
 
 ი         ის             (1a)
 ი         ისა            (1a)

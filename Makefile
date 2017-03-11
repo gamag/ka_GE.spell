@@ -33,7 +33,7 @@ words/bumbeishvili.%: scripts/bumbeishvili.sh
 	@echo updating word list
 	@./scripts/bumbeishvili.sh $(AUTH)
 
-$(AFF): scripts/makeaff.sh affixes/*.aff
+$(AFF): scripts/makeaff.sh affixes/*.aff affixes/*.aff.m4
 	@echo building affix file
 	@./scripts/makeaff.sh $(AUTH) $(AFF)
 

@@ -26,7 +26,7 @@ adir=../affixes
 echo "$LICENSE" >"$AFF"
 head -n -1 "$adir/head.aff"  | tail -n +2 >>"$AFF"
 head -n -1 "$adir/nouns.aff" | tail -n +2 >>"$AFF"
-#cat "$adir/verbs.aff" >>"$AFF"
+m4 "$adir/verbs.aff.m4" >>"$AFF"
 #...
 tail -n +2 "$adir/tail.aff" >>"$AFF"
 

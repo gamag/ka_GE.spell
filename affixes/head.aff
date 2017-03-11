@@ -32,12 +32,21 @@ MAP სზ
 MAP პფ
 MAP გღ
 
-FORBIDDENWORD !
-NOSUGGEST %
+FLAG long
 
-NEEDAFFIX &
+## Flag allocation:
+# Only the first of each pair is assigned here.
+#
+# System flag: &
+# Nouns: N
+# Verbs: ABCDEFIJKLOPQTUVabcdefijklopqtuv0-9
+# Other: GHMRSWXYZghmnrswxyz
 
-CIRCUMFIX *
+FORBIDDENWORD &!
+NOSUGGEST &n
 
+NEEDAFFIX &v
+
+CIRCUMFIX &x
 
 # vim: set ts=8 et:
