@@ -61,3 +61,14 @@ NE($2,`.	$2-		(1y)')
 ')
 FOREACH(`PV',`PRESENT1(PV)', PREVERBS)
 
+define(`PRESENT2', `
+Q$1 (1m 0y 2h v) {
+.:.		$2ვ-ი	(1m)
+.:.		$2-ი	(1y)
+.:.		$2-ა	(1h)
+.:.		$2ვ-ით	(1m)
+.:.		$2-ით	(1y)
+.:.		$2-იან	(1h)
+}
+')
+FOREACH(`PV',`PRESENT2(PV)', PREVERBS)

@@ -937,6 +937,137 @@ SFX PN 0       ენ/&x0N        [^ი]
 SFX PN 0       ან/&x0N        ი
   
 
+
+
+SFX QI Y 7
+SFX QI 0       ი/&x1I         .
+SFX QI 0       ი/&x0I         .
+SFX QI 0       ა/&x0I         .
+SFX QI 0       ით/&x1I        .
+SFX QI 0       ით/&x0I        .
+SFX QI 0       იან/&x0I       .
+  
+SFX Qo Y 7
+SFX Qo 0       ი/&x1o         .
+SFX Qo 0       ი/&x0o         .
+SFX Qo 0       ა/&x0o         .
+SFX Qo 0       ით/&x1o        .
+SFX Qo 0       ით/&x0o        .
+SFX Qo 0       იან/&x0o       .
+  
+SFX QA Y 7
+SFX QA 0       ი/&x1A         .
+SFX QA 0       ი/&x0A         .
+SFX QA 0       ა/&x0A         .
+SFX QA 0       ით/&x1A        .
+SFX QA 0       ით/&x0A        .
+SFX QA 0       იან/&x0A       .
+  
+SFX QC Y 7
+SFX QC 0       ი/&x1C         .
+SFX QC 0       ი/&x0C         .
+SFX QC 0       ა/&x0C         .
+SFX QC 0       ით/&x1C        .
+SFX QC 0       ით/&x0C        .
+SFX QC 0       იან/&x0C       .
+  
+SFX Qa Y 7
+SFX Qa 0       ი/&x1a         .
+SFX Qa 0       ი/&x0a         .
+SFX Qa 0       ა/&x0a         .
+SFX Qa 0       ით/&x1a        .
+SFX Qa 0       ით/&x0a        .
+SFX Qa 0       იან/&x0a       .
+  
+SFX Qc Y 7
+SFX Qc 0       ი/&x1c         .
+SFX Qc 0       ი/&x0c         .
+SFX Qc 0       ა/&x0c         .
+SFX Qc 0       ით/&x1c        .
+SFX Qc 0       ით/&x0c        .
+SFX Qc 0       იან/&x0c       .
+  
+SFX QE Y 7
+SFX QE 0       ი/&x1E         .
+SFX QE 0       ი/&x0E         .
+SFX QE 0       ა/&x0E         .
+SFX QE 0       ით/&x1E        .
+SFX QE 0       ით/&x0E        .
+SFX QE 0       იან/&x0E       .
+  
+SFX QG Y 7
+SFX QG 0       ი/&x1G         .
+SFX QG 0       ი/&x0G         .
+SFX QG 0       ა/&x0G         .
+SFX QG 0       ით/&x1G        .
+SFX QG 0       ით/&x0G        .
+SFX QG 0       იან/&x0G       .
+  
+SFX Qe Y 7
+SFX Qe 0       ი/&x1e         .
+SFX Qe 0       ი/&x0e         .
+SFX Qe 0       ა/&x0e         .
+SFX Qe 0       ით/&x1e        .
+SFX Qe 0       ით/&x0e        .
+SFX Qe 0       იან/&x0e       .
+  
+SFX Qg Y 7
+SFX Qg 0       ი/&x1g         .
+SFX Qg 0       ი/&x0g         .
+SFX Qg 0       ა/&x0g         .
+SFX Qg 0       ით/&x1g        .
+SFX Qg 0       ით/&x0g        .
+SFX Qg 0       იან/&x0g       .
+  
+SFX QX Y 7
+SFX QX 0       ი/&x1X         .
+SFX QX 0       ი/&x0X         .
+SFX QX 0       ა/&x0X         .
+SFX QX 0       ით/&x1X        .
+SFX QX 0       ით/&x0X        .
+SFX QX 0       იან/&x0X       .
+  
+SFX Qx Y 7
+SFX Qx 0       ი/&x1x         .
+SFX Qx 0       ი/&x0x         .
+SFX Qx 0       ა/&x0x         .
+SFX Qx 0       ით/&x1x        .
+SFX Qx 0       ით/&x0x        .
+SFX Qx 0       იან/&x0x       .
+  
+SFX QW Y 7
+SFX QW 0       ი/&x1W         .
+SFX QW 0       ი/&x0W         .
+SFX QW 0       ა/&x0W         .
+SFX QW 0       ით/&x1W        .
+SFX QW 0       ით/&x0W        .
+SFX QW 0       იან/&x0W       .
+  
+SFX Qw Y 7
+SFX Qw 0       ი/&x1w         .
+SFX Qw 0       ი/&x0w         .
+SFX Qw 0       ა/&x0w         .
+SFX Qw 0       ით/&x1w        .
+SFX Qw 0       ით/&x0w        .
+SFX Qw 0       იან/&x0w       .
+  
+SFX Qn Y 7
+SFX Qn 0       ი/&x1n         .
+SFX Qn 0       ი/&x0n         .
+SFX Qn 0       ა/&x0n         .
+SFX Qn 0       ით/&x1n        .
+SFX Qn 0       ით/&x0n        .
+SFX Qn 0       იან/&x0n       .
+  
+SFX QN Y 7
+SFX QN 0       ი/&x1N         .
+SFX QN 0       ი/&x0N         .
+SFX QN 0       ა/&x0N         .
+SFX QN 0       ით/&x1N        .
+SFX QN 0       ით/&x0N        .
+SFX QN 0       იან/&x0N       .
+  
+
 # vim: set ts=8 et:
 
 # Rules for unidentified words.

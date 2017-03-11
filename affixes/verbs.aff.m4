@@ -138,4 +138,16 @@ SFX P$1 0       ან/&x0$1        ი
 ')
 FOREACH(`PV',`PRESENT1(PV)', PREVERBMARKS)
 
+dnl type two
+define(`PRESENT2',`
+SFX Q$1 Y 7
+SFX Q$1 0       ი/&x1$1         .
+SFX Q$1 0       ი/&x0$1         .
+SFX Q$1 0       ა/&x0$1         .
+SFX Q$1 0       ით/&x1$1        .
+SFX Q$1 0       ით/&x0$1        .
+SFX Q$1 0       იან/&x0$1       .
+')
+FOREACH(`PV',`PRESENT2(PV)', PREVERBMARKS)
+
 # vim: set ts=8 et:
