@@ -41,12 +41,53 @@ define(`PREVERBMARKS', ``I',`o',`A',`C',`a',`c',`E',`G',`e',`g',`X',`x',`W',`w',
 dnl list of preverbs to be used with foreach
 define(`PREVERBS', ``I,მი',`o,მო',`A,ა',`C,ჩა',`a,ამო',`c,ჩამო',`E,შე',`G,გა',`e,შემო',`g,გამო',`X,გადა',`x,გადმო',`W,წა',`w,წამო',`n,და',`N,`''')
 
-
-#################
-# Present tense #
-#################
+#########################
+# Imperfect/Conditional #
+#########################
 
 dnl takes $1 = preverb flag, $2 = preverb
+define(`IMPERFECT2', `
+J$1 (1m 1y 2h o) {
+.:.		$2ვ-ოდი		(1m)
+.:.		$2-ოდი		(1y)
+.:.		$2-ოდა		(1h)
+.:.		$2ვ-ოდით	(1m)
+.:.		$2-ოდით		(1y)
+.:.		$2-ოდნენ	(1h)
+.:.		$2ვ-ოდე		(1m)
+.:.		$2-ოდე		(1y)
+.:.		$2-ოდეს		(1h)
+.:.		$2ვ-ოდეთ	(1m)
+.:.		$2-ოდეთ		(1y)
+}
+')
+FOREACH(`PV',`IMPERFECT2(PV)', PREVERBS)
+
+define(`IMPERFECT1', `
+I$1 (1m 1y 2h o) {
+.:.		$2ვ-დი		(1m)
+.:.		$2-დი		(1y)
+.:.		$2-და		(1h)
+.:.		$2ვ-დით		(1m)
+.:.		$2-დით		(1y)
+.:.		$2-დნენ		(1h)
+.:.		$2ვ-დე		(1m)
+.:.		$2-დე		(1y)
+.:.		$2-დეს		(1h)
+.:.		$2ვ-დეთ		(1m)
+.:.		$2-დეთ		(1y)
+}
+')
+FOREACH(`PV',`IMPERFECT1(PV)', PREVERBS)
+
+##################
+# Present/Future #
+##################
+
+dnl takes $1 = preverb flag, $2 = preverb
+dnl OC($2): in case of no preverb, we must not forbid the 2. person singular
+dnl form, but if we have a preverb, we might not create it for the preverbless.
+dnl verb.
 define(`PRESENT1', `
 P$1 (1m 0y 2h 0x OC($2)) {
 .		$2ვ-	(1m)

@@ -140,7 +140,7 @@ FOREACH(`PV',`PRESENT1(PV)', PREVERBMARKS)
 
 dnl type two
 define(`PRESENT2',`
-SFX Q$1 Y 7
+SFX Q$1 Y 6
 SFX Q$1 0       ი/&x1$1         .
 SFX Q$1 0       ი/&x0$1         .
 SFX Q$1 0       ა/&x0$1         .
@@ -149,5 +149,43 @@ SFX Q$1 0       ით/&x0$1        .
 SFX Q$1 0       იან/&x0$1       .
 ')
 FOREACH(`PV',`PRESENT2(PV)', PREVERBMARKS)
+
+##########################################
+# Imperfect, Conditional and Subjunctive #
+##########################################
+
+define(`IMPERFECT1',`
+SFX I$1 Y 11
+SFX I$1 0       დი/&x1$1         .
+SFX I$1 0       დი/&x0$1         .
+SFX I$1 0       და/&x0$1         .
+SFX I$1 0       დით/&x1$1        .
+SFX I$1 0       დით/&x0$1        .
+SFX I$1 0       დნენ/&x0$1       .
+SFX I$1 0       დე/&x1$1         . # Subjunctive 
+SFX I$1 0       დე/&x0$1         .
+SFX I$1 0       დეს/&x0$1        .
+SFX I$1 0       დეთ/&x1$1        .
+SFX I$1 0       დეთ/&x0$1        .
+# ოდნენ
+')
+FOREACH(`PV',`IMPERFECT1(PV)', PREVERBMARKS)
+
+define(`IMPERFECT2',`
+SFX J$1 Y 11
+SFX J$1 0       ოდი/&x1$1         .
+SFX J$1 0       ოდი/&x0$1         .
+SFX J$1 0       ოდა/&x0$1         .
+SFX J$1 0       ოდით/&x1$1        .
+SFX J$1 0       ოდით/&x0$1        .
+SFX J$1 0       ოდნენ/&x0$1       .
+SFX J$1 0       ოდე/&x1$1         . # Subjunctive
+SFX J$1 0       ოდე/&x0$1         .
+SFX J$1 0       ოდეს/&x0$1         .
+SFX J$1 0       ოდეთ/&x1$1        .
+SFX J$1 0       ოდეთ/&x0$1        .
+# ოდნენ
+')
+FOREACH(`PV',`IMPERFECT2(PV)', PREVERBMARKS)
 
 # vim: set ts=8 et:
