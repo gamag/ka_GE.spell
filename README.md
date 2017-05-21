@@ -6,6 +6,10 @@ Contains:
 - Hunspell dictionary (MIT License) (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more)
 - Script to generate the dictionary from word lists (GPL3)
 
+Note: The used word lists have been automatically created by crawling the
+internet using different techniques, so many words may be missing or wrong
+(which leads to false positives/negatives)
+
 ## Dictionary installation ##
 
 ### In Applications ##
