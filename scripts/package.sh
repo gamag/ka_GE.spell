@@ -44,12 +44,12 @@ function mozilla() {
 
 function ooo() {
 	mkdir -p ooo
-	cp -t ooo ../pkgdata/OOO/*.*
+	cp -rt ooo ../pkgdata/OOO/*
 	sed -e "s/{{VERSION}}/$(version num)/" ../pkgdata/OOO/description.xml >ooo/description.xml
 	ln -f $AFF ooo/ka-GE.aff
 	ln -f $DIC ooo/ka-GE.dic
 	cd ooo
-	zip $RES *.*
+	zip -r $RES *
 	cd ..
 }
 
