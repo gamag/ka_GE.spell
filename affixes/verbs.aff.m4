@@ -21,19 +21,19 @@ dnl G გა
 dnl e შემო
 dnl g გამო
 dnl X გადა
-dnl x გადმო 
+dnl x გადმო
 dnl W წა
 dnl w წამო
 dnl n და
 dnl N 0
 dnl
 dnl Suffixes:
-dnl   Present: PQpq
-dnl   Imperfect: IJij
-dnl   Subjunctive: KLkl
+dnl   Present: PQ (pq)
+dnl   Imperfect: IJ (ij)
+dnl   (Subjunctive: KL)
 dnl
-dnl   Aorist: ABab
-dnl   Optativ: OTot
+dnl   Aorist: ABabkl (A=ე, B=ი, a=ა 3-sg, b=ო 3-sg, k=ეს 3-pl, l=ნენ 3-pl)
+dnl   Optativ: OTot (O=ო, T=ა, o=ე)
 dnl
 dnl   Perfect: EFef
 dnl   Pluperfect: UVuv
@@ -53,10 +53,10 @@ dnl  მი: 6
 dnl  გი: 7
 dnl  გვი: 8
 dnl  უ: 9
-dnl   
+dnl
 dnl "Public" flags are combined from one suffix flag followed by a preverb flag.
 dnl prefix flags combined with preverb flags are to be used only as circumfixes.
- 
+
 
 dnl##########################################dnl
 dnl  tools, general lists and helper macros  dnl
@@ -150,6 +150,7 @@ SFX Q$1 0       იან/&x0$1       .
 ')
 FOREACH(`PV',`PRESENT2(PV)', PREVERBMARKS)
 
+
 ##########################################
 # Imperfect, Conditional and Subjunctive #
 ##########################################
@@ -187,5 +188,75 @@ SFX J$1 0       ოდეთ/&x0$1        .
 # ოდნენ
 ')
 FOREACH(`PV',`IMPERFECT2(PV)', PREVERBMARKS)
+
+
+##########
+# Aorist #
+##########
+
+dnl   Aorist: ABabkl (A=ე, B=ი, a=ა 3-sg, b=ო 3-sg, k=ეს 3-pl, l=ნენ 3-pl)
+define(`AORIST',`
+SFX A$1 Y 4
+SFX A$1 0       ე/&x1$1         .
+SFX A$1 0       ე/&x0$1         .
+SFX A$1 0       ეთ/&x1$1        .
+SFX A$1 0       ეთ/&x0$1        .
+
+SFX B$1 Y 4
+SFX B$1 0       ი/&x1$1         .
+SFX B$1 0       ი/&x0$1         .
+SFX B$1 0       ით/&x1$1        .
+SFX B$1 0       ით/&x0$1        .
+
+SFX a$1 Y 1
+SFX a$1 0 ა/&x0$1       .
+
+SFX b$1 Y 1
+SFX b$1 0 ო/&x0$1       .
+
+SFX k$1 Y 1
+SFX k$1 0 ეს/&x0$1       .
+
+SFX l$1 Y 1
+SFX l$1 0 ნენ/&x0$1       .
+')
+FOREACH(`PV',`AORIST(PV)', PREVERBMARKS)
+
+############
+# Optative #
+############
+
+define(`OPTATIVEo',`
+SFX O$1 Y 6
+SFX O$1 0       ო/&x1$1        .
+SFX O$1 0       ო/&x0$1        .
+SFX O$1 0       ოს/&x0$1       .
+SFX O$1 0       ოთ/&x1$1       .
+SFX O$1 0       ოთ/&x0$1       .
+SFX O$1 0       ონ/&x0$1       .
+')
+FOREACH(`PV',`OPTATIVEo(PV)', PREVERBMARKS)
+
+define(`OPTATIVEa',`
+SFX T$1 Y 6
+SFX T$1 0       ა/&x1$1        .
+SFX T$1 0       ა/&x0$1        .
+SFX T$1 0       ას/&x0$1       .
+SFX T$1 0       ათ/&x1$1       .
+SFX T$1 0       ათ/&x0$1       .
+SFX T$1 0       ან/&x0$1       .
+')
+FOREACH(`PV',`OPTATIVEa(PV)', PREVERBMARKS)
+
+define(`OPTATIVEe',`
+SFX o$1 Y 6
+SFX o$1 0       ე/&x1$1        .
+SFX o$1 0       ე/&x0$1        .
+SFX o$1 0       ეს/&x0$1       .
+SFX o$1 0       ეთ/&x1$1       .
+SFX o$1 0       ეთ/&x0$1       .
+SFX o$1 0       ნენ/&x0$1      .
+')
+FOREACH(`PV',`OPTATIVEe(PV)', PREVERBMARKS)
 
 # vim: set ts=8 et:
