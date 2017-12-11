@@ -3,7 +3,7 @@
 
 Contains:
 
-- Hunspell dictionary (MIT License) (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more)
+- Hunspell dictionary (MIT License) (for OpenOffice.org, Mozilla Firefox, Google Chrome, and may more) in `dictionaries/`
 - Script to generate the dictionary from word lists (GPL3)
 
 Note: The used word lists have been automatically created by crawling the
@@ -14,19 +14,15 @@ internet using different techniques, so many words may be missing or wrong
 
 ### In Applications ##
 
-- In OpenOffice and LibreOffice the dictionary can be installed from the extension manager:
+- __OpenOffice and LibreOffice__: An extension package it available 
+  [here](https://extensions.openoffice.org/en/project/kartuli-ortograpiuli-leksikoni-georgian-spell-checking-dictionary)
+  The dictionary extension can be installed from the extension manager:
   From the menu `tools` select `Extension Manager`. In the extension manager
-  window click `add` and open `dictionaries/ka_GE.spell.oxt`
-- In Firefox: open `dictionaries/ka_GE.spell.xpi` in your browser.
-- In Thunderbird: open the add-ons manager and drag the .xpi file there.
-- TODO: other applications.
+  window click `add` and open `ka_GE.spell_.oxt`
+- __Firefox, Thunderbird__: Install the plugin from [AMO](https://addons.mozilla.org/de/firefox/addon/georgian-dictionary/)
+- __Other open source applications__: Contact the developers and ask them to include this dictionary (see #3).
 
 ### System wide ###
-
-#### Windows ####
-
-I don't know if and how this is possible, probably not at all. Install the dictionary
-directly in the programs you use (see above).
 
 #### Mac OS X (10.6 and later) ####
 
@@ -38,7 +34,7 @@ directly in the programs you use (see above).
 
 #### Linux ####
 
-copy `dictionaries/ka_GE.dic` and `dictionaries/ka_GE.aff` to `/usr/share/hunspell/`
+Copy `dictionaries/ka_GE.dic` and `dictionaries/ka_GE.aff` to `/usr/share/hunspell/`
 
 
 ## Data sources ##
@@ -61,7 +57,7 @@ and run make.
 
 To build the dictionary, run `make all`
 
-To build the packages, run `make bundle` later.
+To build the packages for firefox and OpenOffice, run `make bundle` later.
 
 ### Updating Bumbeishvilis word list ###
 
